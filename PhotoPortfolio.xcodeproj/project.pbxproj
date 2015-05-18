@@ -17,6 +17,12 @@
 		9C08E1E71B0A174000B4F48B /* ice_in_nowray.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1E61B0A174000B4F48B /* ice_in_nowray.jpg */; };
 		9C08E1E91B0A174C00B4F48B /* RWANDA_terraced_field_agriculture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1E81B0A174C00B4F48B /* RWANDA_terraced_field_agriculture.jpg */; };
 		9C08E1EB1B0A175A00B4F48B /* NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1EA1B0A175A00B4F48B /* NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg */; };
+		9C08E1F41B0A335900B4F48B /* Bird_flying_over_the_water_Iceland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1EE1B0A335900B4F48B /* Bird_flying_over_the_water_Iceland.jpg */; };
+		9C08E1F51B0A335900B4F48B /* ice_foe_iceland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1EF1B0A335900B4F48B /* ice_foe_iceland.jpg */; };
+		9C08E1F61B0A335900B4F48B /* norway_landscape.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1F01B0A335900B4F48B /* norway_landscape.jpg */; };
+		9C08E1F71B0A335900B4F48B /* polar_bear_pulling_blubber.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1F11B0A335900B4F48B /* polar_bear_pulling_blubber.jpg */; };
+		9C08E1F81B0A335900B4F48B /* polar_bear_walking_on_ice.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1F21B0A335900B4F48B /* polar_bear_walking_on_ice.jpg */; };
+		9C08E1F91B0A335900B4F48B /* seal_on_ice_floe_svalbard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1F31B0A335900B4F48B /* seal_on_ice_floe_svalbard.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		9C08E1E61B0A174000B4F48B /* ice_in_nowray.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ice_in_nowray.jpg; sourceTree = "<group>"; };
 		9C08E1E81B0A174C00B4F48B /* RWANDA_terraced_field_agriculture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RWANDA_terraced_field_agriculture.jpg; sourceTree = "<group>"; };
 		9C08E1EA1B0A175A00B4F48B /* NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg; sourceTree = "<group>"; };
+		9C08E1EE1B0A335900B4F48B /* Bird_flying_over_the_water_Iceland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bird_flying_over_the_water_Iceland.jpg; sourceTree = "<group>"; };
+		9C08E1EF1B0A335900B4F48B /* ice_foe_iceland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ice_foe_iceland.jpg; sourceTree = "<group>"; };
+		9C08E1F01B0A335900B4F48B /* norway_landscape.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = norway_landscape.jpg; sourceTree = "<group>"; };
+		9C08E1F11B0A335900B4F48B /* polar_bear_pulling_blubber.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = polar_bear_pulling_blubber.jpg; sourceTree = "<group>"; };
+		9C08E1F21B0A335900B4F48B /* polar_bear_walking_on_ice.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = polar_bear_walking_on_ice.jpg; sourceTree = "<group>"; };
+		9C08E1F31B0A335900B4F48B /* seal_on_ice_floe_svalbard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = seal_on_ice_floe_svalbard.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +85,12 @@
 				9C08E1E61B0A174000B4F48B /* ice_in_nowray.jpg */,
 				9C08E1E81B0A174C00B4F48B /* RWANDA_terraced_field_agriculture.jpg */,
 				9C08E1EA1B0A175A00B4F48B /* NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg */,
+				9C08E1EE1B0A335900B4F48B /* Bird_flying_over_the_water_Iceland.jpg */,
+				9C08E1EF1B0A335900B4F48B /* ice_foe_iceland.jpg */,
+				9C08E1F01B0A335900B4F48B /* norway_landscape.jpg */,
+				9C08E1F11B0A335900B4F48B /* polar_bear_pulling_blubber.jpg */,
+				9C08E1F21B0A335900B4F48B /* polar_bear_walking_on_ice.jpg */,
+				9C08E1F31B0A335900B4F48B /* seal_on_ice_floe_svalbard.jpg */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,9 +224,15 @@
 			files = (
 				9C08E1CA1B0A00CB00B4F48B /* Main.storyboard in Resources */,
 				9C08E1CF1B0A00CB00B4F48B /* LaunchScreen.xib in Resources */,
+				9C08E1F61B0A335900B4F48B /* norway_landscape.jpg in Resources */,
+				9C08E1F41B0A335900B4F48B /* Bird_flying_over_the_water_Iceland.jpg in Resources */,
+				9C08E1F91B0A335900B4F48B /* seal_on_ice_floe_svalbard.jpg in Resources */,
+				9C08E1F51B0A335900B4F48B /* ice_foe_iceland.jpg in Resources */,
 				9C08E1E91B0A174C00B4F48B /* RWANDA_terraced_field_agriculture.jpg in Resources */,
 				9C08E1EB1B0A175A00B4F48B /* NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg in Resources */,
+				9C08E1F71B0A335900B4F48B /* polar_bear_pulling_blubber.jpg in Resources */,
 				9C08E1E71B0A174000B4F48B /* ice_in_nowray.jpg in Resources */,
+				9C08E1F81B0A335900B4F48B /* polar_bear_walking_on_ice.jpg in Resources */,
 				9C08E1CC1B0A00CB00B4F48B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
