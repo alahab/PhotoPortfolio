@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,18 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    
+        
         // Override point for customization after application launch.
         
         //UINavigationBar.appearance().backgroundColor = UIColor(red: 43.0/255.0, green: 69.0/255.0, blue: 83.0/255.0, alpha: 1.0)
         
-        //UINavigationBar.appearance().barTintColor = UIColor(red: 43.0/255.0, green: 69.0/255.0, blue: 83.0/255.0, alpha: 1.0)
+        //UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
         
        // UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor(red: 43.0/255.0, green: 69.0/255.0, blue: 83.0/255.0, alpha: 0.4)]
         
        // UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+       
         
         if let font = UIFont(name: "STHeitiTC-Medium", size: 20) {
            UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor() ]
+           UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor() ], forState: UIControlState.Normal)
         }
         
        UIApplication.sharedApplication().statusBarHidden = true
@@ -55,7 +60,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    
+   
 }
 

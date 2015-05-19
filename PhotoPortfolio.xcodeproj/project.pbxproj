@@ -14,15 +14,9 @@
 		9C08E1CF1B0A00CB00B4F48B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1CD1B0A00CB00B4F48B /* LaunchScreen.xib */; };
 		9C08E1DB1B0A00CB00B4F48B /* PhotoPortfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08E1DA1B0A00CB00B4F48B /* PhotoPortfolioTests.swift */; };
 		9C08E1E51B0A016500B4F48B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08E1E41B0A016500B4F48B /* CollectionViewCell.swift */; };
-		9C08E1E71B0A174000B4F48B /* ice_in_nowray.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1E61B0A174000B4F48B /* ice_in_nowray.jpg */; };
-		9C08E1E91B0A174C00B4F48B /* RWANDA_terraced_field_agriculture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1E81B0A174C00B4F48B /* RWANDA_terraced_field_agriculture.jpg */; };
-		9C08E1EB1B0A175A00B4F48B /* NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1EA1B0A175A00B4F48B /* NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg */; };
-		9C08E1F41B0A335900B4F48B /* Bird_flying_over_the_water_Iceland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1EE1B0A335900B4F48B /* Bird_flying_over_the_water_Iceland.jpg */; };
-		9C08E1F51B0A335900B4F48B /* ice_foe_iceland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1EF1B0A335900B4F48B /* ice_foe_iceland.jpg */; };
-		9C08E1F61B0A335900B4F48B /* norway_landscape.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1F01B0A335900B4F48B /* norway_landscape.jpg */; };
-		9C08E1F71B0A335900B4F48B /* polar_bear_pulling_blubber.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1F11B0A335900B4F48B /* polar_bear_pulling_blubber.jpg */; };
-		9C08E1F81B0A335900B4F48B /* polar_bear_walking_on_ice.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1F21B0A335900B4F48B /* polar_bear_walking_on_ice.jpg */; };
-		9C08E1F91B0A335900B4F48B /* seal_on_ice_floe_svalbard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C08E1F31B0A335900B4F48B /* seal_on_ice_floe_svalbard.jpg */; };
+		9C08E1FB1B0A34A300B4F48B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08E1FA1B0A34A300B4F48B /* Data.swift */; };
+		9CC9882F1B0ADBD500204176 /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9882E1B0ADBD500204176 /* AlbumDetailViewController.swift */; };
+		9CC988311B0ADC2800204176 /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC988301B0ADC2800204176 /* AlbumDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,15 +41,9 @@
 		9C08E1D91B0A00CB00B4F48B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C08E1DA1B0A00CB00B4F48B /* PhotoPortfolioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPortfolioTests.swift; sourceTree = "<group>"; };
 		9C08E1E41B0A016500B4F48B /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		9C08E1E61B0A174000B4F48B /* ice_in_nowray.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ice_in_nowray.jpg; sourceTree = "<group>"; };
-		9C08E1E81B0A174C00B4F48B /* RWANDA_terraced_field_agriculture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RWANDA_terraced_field_agriculture.jpg; sourceTree = "<group>"; };
-		9C08E1EA1B0A175A00B4F48B /* NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg; sourceTree = "<group>"; };
-		9C08E1EE1B0A335900B4F48B /* Bird_flying_over_the_water_Iceland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bird_flying_over_the_water_Iceland.jpg; sourceTree = "<group>"; };
-		9C08E1EF1B0A335900B4F48B /* ice_foe_iceland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ice_foe_iceland.jpg; sourceTree = "<group>"; };
-		9C08E1F01B0A335900B4F48B /* norway_landscape.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = norway_landscape.jpg; sourceTree = "<group>"; };
-		9C08E1F11B0A335900B4F48B /* polar_bear_pulling_blubber.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = polar_bear_pulling_blubber.jpg; sourceTree = "<group>"; };
-		9C08E1F21B0A335900B4F48B /* polar_bear_walking_on_ice.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = polar_bear_walking_on_ice.jpg; sourceTree = "<group>"; };
-		9C08E1F31B0A335900B4F48B /* seal_on_ice_floe_svalbard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = seal_on_ice_floe_svalbard.jpg; sourceTree = "<group>"; };
+		9C08E1FA1B0A34A300B4F48B /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		9CC9882E1B0ADBD500204176 /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
+		9CC988301B0ADC2800204176 /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,18 +67,10 @@
 		9C08E1B61B0A00CA00B4F48B = {
 			isa = PBXGroup;
 			children = (
+				9CC988301B0ADC2800204176 /* AlbumDetailViewController.swift */,
 				9C08E1C11B0A00CB00B4F48B /* PhotoPortfolio */,
 				9C08E1D71B0A00CB00B4F48B /* PhotoPortfolioTests */,
 				9C08E1C01B0A00CB00B4F48B /* Products */,
-				9C08E1E61B0A174000B4F48B /* ice_in_nowray.jpg */,
-				9C08E1E81B0A174C00B4F48B /* RWANDA_terraced_field_agriculture.jpg */,
-				9C08E1EA1B0A175A00B4F48B /* NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg */,
-				9C08E1EE1B0A335900B4F48B /* Bird_flying_over_the_water_Iceland.jpg */,
-				9C08E1EF1B0A335900B4F48B /* ice_foe_iceland.jpg */,
-				9C08E1F01B0A335900B4F48B /* norway_landscape.jpg */,
-				9C08E1F11B0A335900B4F48B /* polar_bear_pulling_blubber.jpg */,
-				9C08E1F21B0A335900B4F48B /* polar_bear_walking_on_ice.jpg */,
-				9C08E1F31B0A335900B4F48B /* seal_on_ice_floe_svalbard.jpg */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,9 +86,11 @@
 		9C08E1C11B0A00CB00B4F48B /* PhotoPortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				9C08E1FA1B0A34A300B4F48B /* Data.swift */,
 				9C08E1C41B0A00CB00B4F48B /* AppDelegate.swift */,
 				9C08E1C61B0A00CB00B4F48B /* ViewController.swift */,
 				9C08E1E41B0A016500B4F48B /* CollectionViewCell.swift */,
+				9CC9882E1B0ADBD500204176 /* AlbumDetailViewController.swift */,
 				9C08E1C81B0A00CB00B4F48B /* Main.storyboard */,
 				9C08E1CB1B0A00CB00B4F48B /* Images.xcassets */,
 				9C08E1CD1B0A00CB00B4F48B /* LaunchScreen.xib */,
@@ -224,15 +206,6 @@
 			files = (
 				9C08E1CA1B0A00CB00B4F48B /* Main.storyboard in Resources */,
 				9C08E1CF1B0A00CB00B4F48B /* LaunchScreen.xib in Resources */,
-				9C08E1F61B0A335900B4F48B /* norway_landscape.jpg in Resources */,
-				9C08E1F41B0A335900B4F48B /* Bird_flying_over_the_water_Iceland.jpg in Resources */,
-				9C08E1F91B0A335900B4F48B /* seal_on_ice_floe_svalbard.jpg in Resources */,
-				9C08E1F51B0A335900B4F48B /* ice_foe_iceland.jpg in Resources */,
-				9C08E1E91B0A174C00B4F48B /* RWANDA_terraced_field_agriculture.jpg in Resources */,
-				9C08E1EB1B0A175A00B4F48B /* NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg in Resources */,
-				9C08E1F71B0A335900B4F48B /* polar_bear_pulling_blubber.jpg in Resources */,
-				9C08E1E71B0A174000B4F48B /* ice_in_nowray.jpg in Resources */,
-				9C08E1F81B0A335900B4F48B /* polar_bear_walking_on_ice.jpg in Resources */,
 				9C08E1CC1B0A00CB00B4F48B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +227,9 @@
 				9C08E1C71B0A00CB00B4F48B /* ViewController.swift in Sources */,
 				9C08E1C51B0A00CB00B4F48B /* AppDelegate.swift in Sources */,
 				9C08E1E51B0A016500B4F48B /* CollectionViewCell.swift in Sources */,
+				9C08E1FB1B0A34A300B4F48B /* Data.swift in Sources */,
+				9CC9882F1B0ADBD500204176 /* AlbumDetailViewController.swift in Sources */,
+				9CC988311B0ADC2800204176 /* AlbumDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +427,7 @@
 				9C08E1E01B0A00CB00B4F48B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C08E1E11B0A00CB00B4F48B /* Build configuration list for PBXNativeTarget "PhotoPortfolioTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +436,7 @@
 				9C08E1E31B0A00CB00B4F48B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

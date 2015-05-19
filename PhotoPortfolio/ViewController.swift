@@ -8,27 +8,39 @@
 
 import UIKit
 
+var width: CGFloat = 0.0
+
+
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    var data = getData()
+    //synthax -  authorLabel.text = data[number]["author"]
     
+   // var tableImages = data[0]["image"]
     
-    var tableImages = ["ice_in_nowray.jpg", "RWANDA_terraced_field_agriculture.jpg", "NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg", "ice_in_nowray.jpg", "RWANDA_terraced_field_agriculture.jpg", "NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg", "ice_in_nowray.jpg", "RWANDA_terraced_field_agriculture.jpg", "NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg"]
+    //"RWANDA_terraced_field_agriculture.jpg", "NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg", "ice_in_nowray.jpg", "RWANDA_terraced_field_agriculture.jpg", "NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg", "ice_in_nowray.jpg", "RWANDA_terraced_field_agriculture.jpg", "NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+      
+
     }
     
+  
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tableImages.count
+        return data.count
         
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell: CollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
         
-        cell.lblCell.text = tableImages[indexPath.row]
-        cell.imgCell.image =  UIImage(named: tableImages[indexPath.row])
+        
+        cell.imgCell.image =  UIImage(named: data[indexPath.row][indexPath.row]["image"]!)
+        cell.lblCell.text = data[indexPath.row][indexPath.row]["album"]
+       
         return cell
     }
     
@@ -40,16 +52,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+   
 
     
     func collectionView(collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-            
-          var width = view.frame.width/2.35
-            
+        
+           
+          width = view.frame.width/2.3
           return CGSize(width: width, height: width)
     }
-
+    
+       
+    
 }
 
