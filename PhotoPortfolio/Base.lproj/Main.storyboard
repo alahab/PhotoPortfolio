@@ -61,45 +61,36 @@
                                                 </imageView>
                                                 <view alpha="0.5499999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFx-AL-xue">
                                                     <rect key="frame" x="0.0" y="235" width="290" height="55"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ve6-r7-SDf">
+                                                            <rect key="frame" x="122" y="19" width="46" height="17"/>
+                                                            <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="centerX" secondItem="Ve6-r7-SDf" secondAttribute="centerX" id="05h-xU-OzU"/>
+                                                        <constraint firstAttribute="centerY" secondItem="Ve6-r7-SDf" secondAttribute="centerY" id="6tw-Xq-b1b"/>
+                                                    </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ve6-r7-SDf">
-                                                    <rect key="frame" x="124" y="249" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="xFx-AL-xue" secondAttribute="trailing" id="CZn-aY-ZuE"/>
-                                            <constraint firstItem="Ve6-r7-SDf" firstAttribute="centerY" secondItem="xFx-AL-xue" secondAttribute="centerY" constant="-3" id="GSb-jo-TMs"/>
-                                            <constraint firstAttribute="centerX" secondItem="Ve6-r7-SDf" secondAttribute="centerX" id="HSW-xw-laD"/>
                                             <constraint firstItem="24E-fp-kXR" firstAttribute="width" secondItem="xFx-AL-xue" secondAttribute="height" multiplier="58:11" id="Khg-cY-9Rh"/>
-                                            <constraint firstAttribute="centerX" secondItem="Ve6-r7-SDf" secondAttribute="centerX" id="Rvs-eb-rPW"/>
                                             <constraint firstAttribute="bottom" secondItem="24E-fp-kXR" secondAttribute="bottom" id="Ybe-hD-iae"/>
                                             <constraint firstAttribute="trailing" secondItem="24E-fp-kXR" secondAttribute="trailing" id="cUP-a5-7fC"/>
                                             <constraint firstItem="xFx-AL-xue" firstAttribute="leading" secondItem="Ckc-6e-fZS" secondAttribute="leading" id="fig-yE-1av"/>
                                             <constraint firstAttribute="bottom" secondItem="xFx-AL-xue" secondAttribute="bottom" id="ftr-R6-GE6"/>
-                                            <constraint firstItem="Ve6-r7-SDf" firstAttribute="top" secondItem="24E-fp-kXR" secondAttribute="bottom" constant="-41" id="h33-ZR-4I4"/>
-                                            <constraint firstItem="Ve6-r7-SDf" firstAttribute="centerX" secondItem="24E-fp-kXR" secondAttribute="centerX" id="kMt-Go-L3H"/>
                                             <constraint firstItem="24E-fp-kXR" firstAttribute="top" secondItem="Ckc-6e-fZS" secondAttribute="top" id="ooi-R2-62m"/>
                                             <constraint firstItem="24E-fp-kXR" firstAttribute="leading" secondItem="Ckc-6e-fZS" secondAttribute="leading" id="pSb-fI-a7K"/>
-                                            <constraint firstAttribute="centerY" secondItem="Ve6-r7-SDf" secondAttribute="centerY" id="xoe-mT-yGe"/>
                                         </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="HSW-xw-laD"/>
-                                                <exclude reference="Rvs-eb-rPW"/>
-                                                <exclude reference="h33-ZR-4I4"/>
-                                                <exclude reference="xoe-mT-yGe"/>
-                                            </mask>
-                                        </variation>
                                         <connections>
                                             <outlet property="imgCell" destination="24E-fp-kXR" id="Hbx-te-LOP"/>
                                             <outlet property="lblCell" destination="Ve6-r7-SDf" id="zdN-BM-u5t"/>
-                                            <segue destination="QxP-R1-Edv" kind="show" id="aGN-3N-8kj"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -118,6 +109,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="PhotoPortfolio" id="U8N-1t-86b"/>
+                    <connections>
+                        <segue destination="QxP-R1-Edv" kind="show" identifier="AlbumDetail" id="K1B-7z-rcs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,26 +125,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ylv-Bf-TGK">
-                            <size key="itemSize" width="206" height="222"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="ylv-Bf-TGK">
+                            <size key="itemSize" width="293" height="283"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="WKy-5S-GTo" customClass="AlbumDetailCell" customModule="PhotoPortfolio" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumDetailCell" id="WKy-5S-GTo" customClass="AlbumDetailViewCell" customModule="PhotoPortfolio" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="206" height="222"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="293" height="283"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="KENYA_black_rhino_grazing" translatesAutoresizingMaskIntoConstraints="NO" id="hTM-n0-DPU">
+                                            <rect key="frame" x="0.0" y="0.0" width="293" height="288"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <outlet property="albumImageView" destination="hTM-n0-DPU" id="u0t-Xf-h1V"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
-                            <outlet property="dataSource" destination="QxP-R1-Edv" id="MKU-5q-nZy"/>
-                            <outlet property="delegate" destination="QxP-R1-Edv" id="Zoa-AJ-GrX"/>
+                            <outlet property="dataSource" destination="QxP-R1-Edv" id="4sU-ZB-HJE"/>
+                            <outlet property="delegate" destination="QxP-R1-Edv" id="XdO-KM-b5N"/>
                         </connections>
                     </collectionView>
                 </collectionViewController>
@@ -159,4 +161,7 @@
             <point key="canvasLocation" x="1150" y="-192"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="KENYA_black_rhino_grazing" width="880" height="587"/>
+    </resources>
 </document>

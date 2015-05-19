@@ -10,10 +10,15 @@ import UIKit
 
 var width: CGFloat = 0.0
 
+var data = getData()
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var data = getData()
+    var albumName = ""
+    
+    
+    
+    
     //synthax -  authorLabel.text = data[number]["author"]
     
    // var tableImages = data[0]["image"]
@@ -39,13 +44,23 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         
         cell.imgCell.image =  UIImage(named: data[indexPath.row][indexPath.row]["image"]!)
+        
         cell.lblCell.text = data[indexPath.row][indexPath.row]["album"]
        
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
         println("image \(indexPath.row) is selected")
+        
+        albumName = data[indexPath.row][indexPath.row]["album"]!
+        
+        
+        println(albumName)
+        
+        performSegueWithIdentifier("AlbumDetail", sender: self)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,11 +76,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
            
-          width = view.frame.width/2.3
+          width = view.frame.width/2.35
           return CGSize(width: width, height: width)
     }
     
-       
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var detailViewController = segue.destinationViewController as! AlbumDetailViewController
+        
+        detailViewController.albumName = albumName
+        
+        
+    }
     
 }
 
