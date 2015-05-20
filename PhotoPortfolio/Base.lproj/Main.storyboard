@@ -229,7 +229,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbH-RB-hTp">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbH-RB-hTp">
                                         <rect key="frame" x="20" y="65" width="468" height="156"/>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="13"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -239,11 +239,17 @@
                                 <color key="backgroundColor" white="1" alpha="0.79000000000000004" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="WbH-RB-hTp" firstAttribute="leading" secondItem="Jwk-hE-8GH" secondAttribute="leading" constant="20" id="2WE-zP-4wu"/>
-                                    <constraint firstAttribute="bottom" secondItem="WbH-RB-hTp" secondAttribute="bottom" constant="15" id="BJL-5H-MJ5"/>
+                                    <constraint firstAttribute="bottom" secondItem="WbH-RB-hTp" secondAttribute="bottom" constant="15" id="BJL-5H-MJ5">
+                                        <variation key="heightClass=compact" constant="10"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" secondItem="WbH-RB-hTp" secondAttribute="trailing" constant="20" id="D7c-Jc-Ai6"/>
-                                    <constraint firstItem="hX3-Yb-VjW" firstAttribute="top" secondItem="Jwk-hE-8GH" secondAttribute="top" constant="15" id="FCX-2g-dIg"/>
+                                    <constraint firstItem="hX3-Yb-VjW" firstAttribute="top" secondItem="Jwk-hE-8GH" secondAttribute="top" constant="15" id="FCX-2g-dIg">
+                                        <variation key="heightClass=compact" constant="10"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" secondItem="hX3-Yb-VjW" secondAttribute="trailing" constant="20" id="Mkg-oa-8mg"/>
-                                    <constraint firstItem="WbH-RB-hTp" firstAttribute="top" secondItem="hX3-Yb-VjW" secondAttribute="bottom" constant="10" id="SdB-Hd-PiV"/>
+                                    <constraint firstItem="WbH-RB-hTp" firstAttribute="top" secondItem="hX3-Yb-VjW" secondAttribute="bottom" constant="10" id="SdB-Hd-PiV">
+                                        <variation key="heightClass=compact" constant="5"/>
+                                    </constraint>
                                     <constraint firstItem="hX3-Yb-VjW" firstAttribute="leading" secondItem="Jwk-hE-8GH" secondAttribute="leading" constant="20" id="ptG-hM-fg2"/>
                                     <constraint firstAttribute="centerX" secondItem="hX3-Yb-VjW" secondAttribute="centerX" id="va0-Rg-OEj"/>
                                 </constraints>
@@ -262,19 +268,38 @@
                             <constraint firstAttribute="trailing" secondItem="lK1-WP-oOE" secondAttribute="trailing" id="7k7-eP-goe"/>
                             <constraint firstItem="7HL-KX-KZ5" firstAttribute="top" secondItem="OZy-jf-Ogh" secondAttribute="bottom" id="7uG-HC-CC7"/>
                             <constraint firstAttribute="trailing" secondItem="OZy-jf-Ogh" secondAttribute="trailing" id="C38-md-858"/>
+                            <constraint firstItem="Jwk-hE-8GH" firstAttribute="top" secondItem="HHf-rb-AjS" secondAttribute="bottom" constant="30" id="FgH-do-LtG">
+                                <variation key="heightClass=compact" constant="75"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                            </constraint>
                             <constraint firstItem="lK1-WP-oOE" firstAttribute="top" secondItem="HHf-rb-AjS" secondAttribute="bottom" id="HdG-6i-56R"/>
                             <constraint firstItem="lK1-WP-oOE" firstAttribute="leading" secondItem="1Jx-df-Wms" secondAttribute="leading" id="LnM-56-dUV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jwk-hE-8GH" secondAttribute="trailing" constant="30" id="UeE-g6-Dba"/>
                             <constraint firstItem="Jwk-hE-8GH" firstAttribute="top" secondItem="HHf-rb-AjS" secondAttribute="bottom" constant="150" id="Vr5-lx-guX"/>
+                            <constraint firstItem="7HL-KX-KZ5" firstAttribute="top" secondItem="Jwk-hE-8GH" secondAttribute="bottom" constant="30" id="ZMo-j3-IA8">
+                                <variation key="heightClass=compact" constant="75"/>
+                            </constraint>
                             <constraint firstItem="7HL-KX-KZ5" firstAttribute="top" secondItem="lK1-WP-oOE" secondAttribute="bottom" id="Zp1-fB-VLf"/>
                             <constraint firstItem="XBH-wc-skD" firstAttribute="top" secondItem="lK1-WP-oOE" secondAttribute="bottom" constant="-42" id="aq6-Sr-qOR"/>
                             <constraint firstItem="XBH-wc-skD" firstAttribute="top" secondItem="lK1-WP-oOE" secondAttribute="bottom" constant="-42" id="asw-Ip-JgQ"/>
-                            <constraint firstItem="Jwk-hE-8GH" firstAttribute="leading" secondItem="1Jx-df-Wms" secondAttribute="leadingMargin" constant="30" id="fM2-qM-Z12"/>
+                            <constraint firstItem="Jwk-hE-8GH" firstAttribute="leading" secondItem="1Jx-df-Wms" secondAttribute="leadingMargin" constant="30" id="fM2-qM-Z12">
+                                <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                            </constraint>
                             <constraint firstItem="OZy-jf-Ogh" firstAttribute="leading" secondItem="1Jx-df-Wms" secondAttribute="leading" id="fgN-QB-Bm8"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="FgH-do-LtG"/>
+                                <exclude reference="ZMo-j3-IA8"/>
                                 <exclude reference="aq6-Sr-qOR"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="FgH-do-LtG"/>
+                                <exclude reference="Vr5-lx-guX"/>
+                                <exclude reference="5F5-eG-a9T"/>
+                                <include reference="ZMo-j3-IA8"/>
                             </mask>
                         </variation>
                     </view>
