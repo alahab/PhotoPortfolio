@@ -16,19 +16,19 @@ func getData() -> Array<Array<Dictionary<String,String>>> {
             "album" : "Norway",
             "title" : "Iceberg",
             "image" : "ice_in_nowray",
-            "text"  : "You guys, the new How To Draw: drawing and sketching objects and environments from your imagination book by S. Robertson is just amazing! I spent the whole weekend gobbling it up and of course I couldn't help but take the watercolors myself! :)\n\nFill up the gas tank and go check out the attachment!\n\nBehance"
+            "text"  : "An iceberg is a large piece of freshwater ice that has broken off a glacier or an ice shelf and is floating freely in open water.[1][2] It may subsequently become frozen into pack ice (one form of sea ice)."
         ],
         [
             "album" : "Norway",
             "title" : "Norwegian Landscape",
             "image" : "norway_landscape",
-            "text"  : "You guys, the new How To Draw: drawing and sketching objects and environments from your imagination book by S. Robertson is just amazing! I spent the whole weekend gobbling it up and of course I couldn't help but take the watercolors myself! :)\n\nFill up the gas tank and go check out the attachment!\n\nBehance"
+            "text"  : "Norway is a Scandinavian country encompassing mountains, glaciers and deep coastal fjords. Oslo, the capital, is a city of green spaces and museums, including the Edvard Munch Museum and the Norsk Folkemuseum, a collection of open-air historic buildings."
         ],
         [
             "album" : "Norway",
             "title" : "Polar Bear pulling blubber",
             "image" : "polar_bear_pulling_blubber",
-            "text"  : "You guys, the new How To Draw: drawing and sketching objects and environments from your imagination book by S. Robertson is just amazing! I spent the whole weekend gobbling it up and of course I couldn't help but take the watercolors myself! :)\n\nFill up the gas tank and go check out the attachment!\n\nBehance"
+            "text"  : "The polar bear is a carnivorous bear whose native range lies largely within the Arctic Circle, encompassing the Arctic Ocean, its surrounding seas and surrounding land masses."
         ],
         [
             "album" : "Norway",

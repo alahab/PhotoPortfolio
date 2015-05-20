@@ -16,10 +16,50 @@ class ImageDetailViewController: UIViewController {
     
     @IBOutlet var singleImage: UIImageView!
     
+    @IBOutlet var maskButton: UIButton!
+    
+    @IBOutlet var descriptionView: UIView!
+    
+    @IBOutlet var imageTitleLabel: UILabel!
+    
+    @IBOutlet var imageDescriptionTextField: UITextView!
+    
+    
+    @IBAction func maskButtonDidPress(sender: AnyObject) {
+        
+        spring(0.5) {
+            self.maskButton.alpha = 0
+        }
+        
+        descriptionView.hidden = true
+
+    }
+    
+    func showMask() {
+        self.maskButton.hidden = false
+        self.maskButton.alpha = 0
+        spring(0.5) {
+            self.maskButton.alpha = 1
+        }
+    }
+    
     @IBAction func infoButton(sender: AnyObject) {
         
-        insertBlurView(singleImage, UIBlurEffectStyle.Dark)
+        let scale = CGAffineTransformMakeScale(0.3, 0.3)
+        let translate = CGAffineTransformMakeTranslation(100, 200)
+        descriptionView.transform = CGAffineTransformConcat(scale, translate)
+        //descriptionView.alpha = 0
         
+        showMask()
+        
+        spring(0.5) {
+            let scale = CGAffineTransformMakeScale(1, 1)
+            let translate = CGAffineTransformMakeTranslation(0, 0)
+            self.descriptionView.transform = CGAffineTransformConcat(scale, translate)
+            self.descriptionView.alpha = 1
+        }
+        
+       self.descriptionView.hidden = false
         
     }
     
@@ -30,9 +70,15 @@ class ImageDetailViewController: UIViewController {
 
         singleImage.image = UIImage(named: data[albumNumber][imageNumber]["image"]!)
         
-        println("second screen  imageNumber is \(imageNumber)")
+        imageTitleLabel.text = data[albumNumber][imageNumber]["title"]
         
-    }
+        imageDescriptionTextField.text = data[albumNumber][imageNumber]["text"]
+        
+        //println("second screen  imageNumber is \(imageNumber)")
+        
+        
+        
+        }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
