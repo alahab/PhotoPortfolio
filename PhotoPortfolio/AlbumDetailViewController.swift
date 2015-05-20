@@ -12,12 +12,12 @@ class AlbumDetailViewController: UIViewController, UICollectionViewDataSource, U
     
     var albumName = "test"
     
-    
+    var albumNumber = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       self.title = albumName
         
         
     }
@@ -28,7 +28,7 @@ class AlbumDetailViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return data[albumNumber].count
         
     }
     
@@ -36,9 +36,7 @@ class AlbumDetailViewController: UIViewController, UICollectionViewDataSource, U
         let cell: AlbumDetailViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("AlbumDetailCell", forIndexPath: indexPath) as! AlbumDetailViewCell
         
         
-        
-        
-        //cell.imgCell.image =  UIImage(named: data[indexPath.row][indexPath.row]["image"]!)
+        cell.albumImageView.image =  UIImage(named: data[albumNumber][indexPath.row]["image"]!)
         //cell.lblCell.text = data[indexPath.row][indexPath.row]["album"]
         
         return cell
@@ -48,10 +46,17 @@ class AlbumDetailViewController: UIViewController, UICollectionViewDataSource, U
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
             
-            width = view.frame.width/2.02
+            width = view.frame.width/2
             return CGSize(width: width, height: width)
             
     }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        performSegueWithIdentifier("fromAlbumToSingleImage", sender: self)
+        
+    }
+
     
     
     

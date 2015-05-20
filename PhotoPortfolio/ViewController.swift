@@ -16,7 +16,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     var albumName = ""
     
-    
+    var albumNumber = 0
     
     
     //synthax -  authorLabel.text = data[number]["author"]
@@ -56,6 +56,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         albumName = data[indexPath.row][indexPath.row]["album"]!
         
+        albumNumber = indexPath.row
         
         println(albumName)
         
@@ -76,7 +77,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
            
-          width = view.frame.width/2.35
+          width = view.frame.width/2
           return CGSize(width: width, height: width)
     }
     
@@ -85,7 +86,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         var detailViewController = segue.destinationViewController as! AlbumDetailViewController
         
         detailViewController.albumName = albumName
-        
+        detailViewController.albumNumber = albumNumber
         
     }
     

@@ -15,6 +15,7 @@
 		9C08E1DB1B0A00CB00B4F48B /* PhotoPortfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08E1DA1B0A00CB00B4F48B /* PhotoPortfolioTests.swift */; };
 		9C08E1E51B0A016500B4F48B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08E1E41B0A016500B4F48B /* CollectionViewCell.swift */; };
 		9C08E1FB1B0A34A300B4F48B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08E1FA1B0A34A300B4F48B /* Data.swift */; };
+		9C378D811B0C390C00783BDE /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C378D801B0C390C00783BDE /* ImageDetailViewController.swift */; };
 		9CC9882F1B0ADBD500204176 /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9882E1B0ADBD500204176 /* AlbumDetailViewController.swift */; };
 		9CC988331B0ADF3A00204176 /* AlbumDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC988321B0ADF3A00204176 /* AlbumDetailViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		9C08E1DA1B0A00CB00B4F48B /* PhotoPortfolioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPortfolioTests.swift; sourceTree = "<group>"; };
 		9C08E1E41B0A016500B4F48B /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		9C08E1FA1B0A34A300B4F48B /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		9C378D801B0C390C00783BDE /* ImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 		9CC9882E1B0ADBD500204176 /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
 		9CC988321B0ADF3A00204176 /* AlbumDetailViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 				9CC9882E1B0ADBD500204176 /* AlbumDetailViewController.swift */,
 				9CC988321B0ADF3A00204176 /* AlbumDetailViewCell.swift */,
 				9C08E1C81B0A00CB00B4F48B /* Main.storyboard */,
+				9C378D801B0C390C00783BDE /* ImageDetailViewController.swift */,
 				9C08E1CB1B0A00CB00B4F48B /* Images.xcassets */,
 				9C08E1CD1B0A00CB00B4F48B /* LaunchScreen.xib */,
 				9C08E1C21B0A00CB00B4F48B /* Supporting Files */,
@@ -226,6 +229,7 @@
 			files = (
 				9C08E1C71B0A00CB00B4F48B /* ViewController.swift in Sources */,
 				9CC988331B0ADF3A00204176 /* AlbumDetailViewCell.swift in Sources */,
+				9C378D811B0C390C00783BDE /* ImageDetailViewController.swift in Sources */,
 				9C08E1C51B0A00CB00B4F48B /* AppDelegate.swift in Sources */,
 				9C08E1E51B0A016500B4F48B /* CollectionViewCell.swift in Sources */,
 				9C08E1FB1B0A34A300B4F48B /* Data.swift in Sources */,
