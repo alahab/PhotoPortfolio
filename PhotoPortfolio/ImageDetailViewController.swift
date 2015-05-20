@@ -9,11 +9,25 @@
 import UIKit
 
 class ImageDetailViewController: UIViewController {
-
+    
+    var albumNumber = 0
+    
+    var imageNumber = 0
+    
+    @IBOutlet var singleImage: UIImageView!
+    
+    @IBAction func infoButton(sender: AnyObject) {
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        singleImage.image = UIImage(named: data[albumNumber][imageNumber]["image"]!)
+        
+        println("second screen  imageNumber is \(imageNumber)")
+        
     }
 
     override func didReceiveMemoryWarning() {

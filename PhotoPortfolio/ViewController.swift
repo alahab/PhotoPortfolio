@@ -21,15 +21,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     //synthax -  authorLabel.text = data[number]["author"]
     
-   // var tableImages = data[0]["image"]
-    
-    //"RWANDA_terraced_field_agriculture.jpg", "NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg", "ice_in_nowray.jpg", "RWANDA_terraced_field_agriculture.jpg", "NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg", "ice_in_nowray.jpg", "RWANDA_terraced_field_agriculture.jpg", "NEW_ZEALAND_Tui_Bird_Kowhai_Tree.jpg"]
-
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-      
-
+        
+        let backItem = UIBarButtonItem(title: "", style: .Bordered, target: nil, action: nil)
+        
+        navigationItem.backBarButtonItem = backItem
+        
     }
     
   

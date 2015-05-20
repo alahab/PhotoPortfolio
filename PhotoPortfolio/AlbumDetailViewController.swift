@@ -13,6 +13,10 @@ class AlbumDetailViewController: UIViewController, UICollectionViewDataSource, U
     var albumName = "test"
     
     var albumNumber = 0
+    
+    var imageNumber = 1
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +39,10 @@ class AlbumDetailViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell: AlbumDetailViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("AlbumDetailCell", forIndexPath: indexPath) as! AlbumDetailViewCell
         
-        
         cell.albumImageView.image =  UIImage(named: data[albumNumber][indexPath.row]["image"]!)
+        
+        
+        
         //cell.lblCell.text = data[indexPath.row][indexPath.row]["album"]
         
         return cell
@@ -53,9 +59,22 @@ class AlbumDetailViewController: UIViewController, UICollectionViewDataSource, U
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        imageNumber = indexPath.row
+        println("first screen imageNumber is \(imageNumber)")
         performSegueWithIdentifier("fromAlbumToSingleImage", sender: self)
         
+        
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var imageDetailViewController = segue.destinationViewController as! ImageDetailViewController
+        
+        imageDetailViewController.albumNumber = albumNumber
+        
+        imageDetailViewController.imageNumber = imageNumber
+        
+    }
+
 
     
     
