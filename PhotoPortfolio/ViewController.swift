@@ -25,7 +25,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backItem = UIBarButtonItem(title: "", style: .Bordered, target: nil, action: nil)
+        let backItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
         
         navigationItem.backBarButtonItem = backItem
         
@@ -44,10 +44,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         cell.imgCell.image =  UIImage(named: data[indexPath.row][indexPath.row]["image"]!)
         
-        cell.lblCell.text = data[indexPath.row][indexPath.row]["album"]
+       cell.lblCell.text = data[indexPath.row][indexPath.row]["album"]
+        
+       
        
         return cell
     }
+    
+    func collectionView(collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+            
+            width = view.frame.width/2
+            println(width)
+            return CGSize(width: width, height: width)
+            
+            
+    }
+    
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
@@ -71,14 +85,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
    
 
     
-    func collectionView(collectionView: UICollectionView,
-        layout collectionViewLayout: UICollectionViewLayout,
-        sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        
-           
-          width = view.frame.width/2
-          return CGSize(width: width, height: width)
-    }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

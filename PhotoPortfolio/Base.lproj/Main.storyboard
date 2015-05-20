@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -39,7 +40,7 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xVs-82-Nol">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xVs-82-Nol">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="M1c-yR-iHx">
@@ -102,10 +103,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xVs-82-Nol" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="8JV-TI-qhe"/>
                             <constraint firstAttribute="trailing" secondItem="xVs-82-Nol" secondAttribute="trailing" id="TmS-QJ-G5e"/>
+                            <constraint firstAttribute="trailing" secondItem="xVs-82-Nol" secondAttribute="trailing" id="U9g-Cj-fix"/>
                             <constraint firstItem="xVs-82-Nol" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-44" id="kCe-gf-nAP"/>
+                            <constraint firstItem="xVs-82-Nol" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ngm-vk-mQc"/>
                             <constraint firstAttribute="bottom" secondItem="xVs-82-Nol" secondAttribute="bottom" id="qWa-wq-AUF"/>
                             <constraint firstItem="xVs-82-Nol" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ugV-f7-rzE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xVs-82-Nol" secondAttribute="bottom" id="yuz-V6-awn"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

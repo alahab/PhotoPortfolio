@@ -53,6 +53,8 @@ class AlbumDetailViewController: UIViewController, UICollectionViewDataSource, U
         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
             
             width = view.frame.width/2
+            
+
             return CGSize(width: width, height: width)
             
     }

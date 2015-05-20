@@ -17,6 +17,10 @@ class ImageDetailViewController: UIViewController {
     @IBOutlet var singleImage: UIImageView!
     
     @IBAction func infoButton(sender: AnyObject) {
+        
+        insertBlurView(singleImage, UIBlurEffectStyle.Dark)
+        
+        
     }
     
     
