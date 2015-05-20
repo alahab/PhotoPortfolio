@@ -217,35 +217,33 @@
                                     <action selector="maskButtonDidPress:" destination="nHu-J6-mrD" eventType="touchUpInside" id="x2u-Kn-rwe"/>
                                 </connections>
                             </button>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwk-hE-8GH">
+                            <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwk-hE-8GH">
                                 <rect key="frame" x="46" y="214" width="508" height="236"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX3-Yb-VjW">
-                                        <rect key="frame" x="20" y="15" width="468" height="35"/>
+                                        <rect key="frame" x="20" y="15" width="468" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="5Zj-V7-edz"/>
+                                            <constraint firstAttribute="height" constant="40" id="5Zj-V7-edz"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="19"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvf-xz-8uq">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbH-RB-hTp">
                                         <rect key="frame" x="20" y="65" width="468" height="156"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
-                                        <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="13"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.79000000000000004" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="WbH-RB-hTp" firstAttribute="leading" secondItem="Jwk-hE-8GH" secondAttribute="leading" constant="20" id="2WE-zP-4wu"/>
+                                    <constraint firstAttribute="bottom" secondItem="WbH-RB-hTp" secondAttribute="bottom" constant="15" id="BJL-5H-MJ5"/>
+                                    <constraint firstAttribute="trailing" secondItem="WbH-RB-hTp" secondAttribute="trailing" constant="20" id="D7c-Jc-Ai6"/>
                                     <constraint firstItem="hX3-Yb-VjW" firstAttribute="top" secondItem="Jwk-hE-8GH" secondAttribute="top" constant="15" id="FCX-2g-dIg"/>
                                     <constraint firstAttribute="trailing" secondItem="hX3-Yb-VjW" secondAttribute="trailing" constant="20" id="Mkg-oa-8mg"/>
-                                    <constraint firstAttribute="trailing" secondItem="Gvf-xz-8uq" secondAttribute="trailing" constant="20" id="PrW-72-oHx"/>
-                                    <constraint firstItem="Gvf-xz-8uq" firstAttribute="top" secondItem="hX3-Yb-VjW" secondAttribute="bottom" constant="15" id="XLI-YU-yu8"/>
-                                    <constraint firstItem="Gvf-xz-8uq" firstAttribute="leading" secondItem="Jwk-hE-8GH" secondAttribute="leading" constant="20" id="dch-5c-4YM"/>
-                                    <constraint firstAttribute="bottom" secondItem="Gvf-xz-8uq" secondAttribute="bottom" constant="15" id="e52-Tq-PoC"/>
+                                    <constraint firstItem="WbH-RB-hTp" firstAttribute="top" secondItem="hX3-Yb-VjW" secondAttribute="bottom" constant="10" id="SdB-Hd-PiV"/>
                                     <constraint firstItem="hX3-Yb-VjW" firstAttribute="leading" secondItem="Jwk-hE-8GH" secondAttribute="leading" constant="20" id="ptG-hM-fg2"/>
                                     <constraint firstAttribute="centerX" secondItem="hX3-Yb-VjW" secondAttribute="centerX" id="va0-Rg-OEj"/>
                                 </constraints>
@@ -282,7 +280,7 @@
                     </view>
                     <connections>
                         <outlet property="descriptionView" destination="Jwk-hE-8GH" id="ILm-4O-Rio"/>
-                        <outlet property="imageDescriptionTextField" destination="Gvf-xz-8uq" id="u0l-4X-XlT"/>
+                        <outlet property="imageDescriptionLabel" destination="WbH-RB-hTp" id="mSh-p8-f94"/>
                         <outlet property="imageTitleLabel" destination="hX3-Yb-VjW" id="wKk-R0-Qh1"/>
                         <outlet property="maskButton" destination="OZy-jf-Ogh" id="voJ-Ww-HYW"/>
                         <outlet property="singleImage" destination="lK1-WP-oOE" id="exh-Ux-f1M"/>

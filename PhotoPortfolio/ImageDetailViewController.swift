@@ -22,7 +22,8 @@ class ImageDetailViewController: UIViewController {
     
     @IBOutlet var imageTitleLabel: UILabel!
     
-    @IBOutlet var imageDescriptionTextField: UITextView!
+    @IBOutlet var imageDescriptionLabel: UILabel!
+   
     
     
     @IBAction func maskButtonDidPress(sender: AnyObject) {
@@ -72,7 +73,7 @@ class ImageDetailViewController: UIViewController {
         
         imageTitleLabel.text = data[albumNumber][imageNumber]["title"]
         
-        imageDescriptionTextField.text = data[albumNumber][imageNumber]["text"]
+        imageDescriptionLabel.text = data[albumNumber][imageNumber]["text"]
         
         //println("second screen  imageNumber is \(imageNumber)")
         
