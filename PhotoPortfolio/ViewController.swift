@@ -56,7 +56,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
             
             width = view.frame.width/2
-            println(width)
+           
             return CGSize(width: width, height: width)
             
             
@@ -65,14 +65,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        println("image \(indexPath.row) is selected")
+        
         
         albumName = data[indexPath.row][indexPath.row]["album"]!
         
         albumNumber = indexPath.row
         
-        println(albumName)
-        
+                
         performSegueWithIdentifier("AlbumDetail", sender: self)
         
     }

@@ -14,6 +14,10 @@ class ImageDetailViewController: UIViewController {
     
     var imageNumber = 0
     
+    var imageIndex: Int = 0
+    
+    var maxImages = 0
+    
     @IBOutlet var singleImage: UIImageView!
     
     @IBOutlet var maskButton: UIButton!
@@ -75,26 +79,97 @@ class ImageDetailViewController: UIViewController {
         
         imageDescriptionLabel.text = data[albumNumber][imageNumber]["text"]
         
+       
+        //FIX MAXIMAGES///////////////////
+        maxImages = data[albumNumber].count - 1
+
+        
         //println("second screen  imageNumber is \(imageNumber)")
         
+        //CHANGE IMAGE ON SWIPE
+        
+        var swipeRight = UISwipeGestureRecognizer(target: self, action: "swiped:") // put : at the end of method name
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        var swipeLeft = UISwipeGestureRecognizer(target: self, action: "swiped:") // put : at the end of method name
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(swipeLeft)
         
         
         }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+
+   
+    //CHANGE IMAGES ON SWIPE
+    
+    func swiped(gesture: UIGestureRecognizer) {
+        
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            
+            switch swipeGesture.direction {
+                
+            case UISwipeGestureRecognizerDirection.Right :
+                println("User swiped right")
+                
+                // decrease index first
+                
+                imageIndex--
+                println("imageIndex is \(imageIndex)")
+                 println("maxImages is \(maxImages)")
+                
+                // check if index is in range
+                
+                if imageIndex < 0 {
+                    
+                    imageIndex = maxImages
+                    
+                }
+                
+                
+                
+                singleImage.image = UIImage(named: data[albumNumber][imageIndex]["image"]!)
+                imageTitleLabel.text = data[albumNumber][imageIndex]["title"]
+                
+                imageDescriptionLabel.text = data[albumNumber][imageIndex]["text"]
+                
+            case UISwipeGestureRecognizerDirection.Left:
+                println("User swiped Left")
+                
+                // increase index first
+                
+                imageIndex++
+                 println("imageIndex is \(imageIndex)")
+                println("maxImages is \(maxImages)")
+                // check if index is in range
+                
+                if imageIndex > maxImages {
+                    
+                    imageIndex = 0
+                    
+                }
+                
+                singleImage.image = UIImage(named: data[albumNumber][imageIndex]["image"]!)
+                
+                imageTitleLabel.text = data[albumNumber][imageIndex]["title"]
+                
+                imageDescriptionLabel.text = data[albumNumber][imageIndex]["text"]
+                
+                
+            default:
+                break //stops the code/codes nothing.
+                
+                
+            }
+            
+        }
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

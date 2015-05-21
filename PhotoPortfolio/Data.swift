@@ -55,6 +55,7 @@ func getData() -> Array<Array<Dictionary<String,String>>> {
     "image" : "KENYA_maasai_man_holding_camera",
     "text"  : "You guys, the new How To Draw: drawing and sketching objects and environments from your imagination book by S. Robertson is just amazing! I spent the whole weekend gobbling it up and of course I couldn't help but take the watercolors myself! :)\n\nFill up the gas tank and go check out the attachment!\n\nBehance"
     ]],
+        
     
     ]
     

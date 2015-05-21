@@ -62,7 +62,7 @@ class AlbumDetailViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         imageNumber = indexPath.row
-        println("first screen imageNumber is \(imageNumber)")
+        
         performSegueWithIdentifier("fromAlbumToSingleImage", sender: self)
         
         
