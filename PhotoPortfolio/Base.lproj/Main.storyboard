@@ -152,8 +152,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="293" height="283"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hTM-n0-DPU">
-                                            <rect key="frame" x="0.0" y="0.0" width="293" height="288"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hTM-n0-DPU">
+                                            <rect key="frame" x="0.0" y="0.0" width="293" height="283"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -185,18 +185,21 @@
         <!--Image Detail View Controller-->
         <scene sceneID="gTi-7g-ugo">
             <objects>
-                <viewController id="nHu-J6-mrD" customClass="ImageDetailViewController" customModule="PhotoPortfolio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="nHu-J6-mrD" customClass="ImageDetailViewController" customModule="PhotoPortfolio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HHf-rb-AjS"/>
                         <viewControllerLayoutGuide type="bottom" id="7HL-KX-KZ5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1Jx-df-Wms">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KENYA_black_rhino_grazing" translatesAutoresizingMaskIntoConstraints="NO" id="lK1-WP-oOE">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sg1-TS-kJ1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="nHu-J6-mrD" id="b3e-an-jOp"/>
+                                </connections>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBH-wc-skD">
                                 <rect key="frame" x="562" y="558" width="22" height="22"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -264,43 +267,39 @@
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="OZy-jf-Ogh" firstAttribute="top" secondItem="HHf-rb-AjS" secondAttribute="bottom" id="0uq-3t-RPM"/>
-                            <constraint firstItem="XBH-wc-skD" firstAttribute="leading" secondItem="lK1-WP-oOE" secondAttribute="trailing" constant="-38" id="4iQ-Tg-Vo5"/>
                             <constraint firstItem="7HL-KX-KZ5" firstAttribute="top" secondItem="Jwk-hE-8GH" secondAttribute="bottom" constant="150" id="5F5-eG-a9T"/>
-                            <constraint firstAttribute="trailing" secondItem="lK1-WP-oOE" secondAttribute="trailing" id="7k7-eP-goe"/>
+                            <constraint firstItem="Jwk-hE-8GH" firstAttribute="top" secondItem="HHf-rb-AjS" secondAttribute="bottom" constant="90" id="5vf-eb-bhj"/>
                             <constraint firstItem="7HL-KX-KZ5" firstAttribute="top" secondItem="OZy-jf-Ogh" secondAttribute="bottom" id="7uG-HC-CC7"/>
                             <constraint firstAttribute="trailing" secondItem="OZy-jf-Ogh" secondAttribute="trailing" id="C38-md-858"/>
-                            <constraint firstItem="Jwk-hE-8GH" firstAttribute="top" secondItem="HHf-rb-AjS" secondAttribute="bottom" constant="30" id="FgH-do-LtG">
-                                <variation key="heightClass=compact" constant="80"/>
-                                <variation key="heightClass=compact-widthClass=regular" constant="50"/>
-                            </constraint>
-                            <constraint firstItem="lK1-WP-oOE" firstAttribute="top" secondItem="HHf-rb-AjS" secondAttribute="bottom" id="HdG-6i-56R"/>
-                            <constraint firstItem="lK1-WP-oOE" firstAttribute="leading" secondItem="1Jx-df-Wms" secondAttribute="leading" id="LnM-56-dUV"/>
+                            <constraint firstItem="XBH-wc-skD" firstAttribute="trailing" secondItem="1Jx-df-Wms" secondAttribute="trailingMargin" id="Dgv-Ox-OQz"/>
+                            <constraint firstAttribute="centerY" secondItem="sg1-TS-kJ1" secondAttribute="centerY" id="NKH-58-JkX"/>
+                            <constraint firstItem="sg1-TS-kJ1" firstAttribute="top" secondItem="1Jx-df-Wms" secondAttribute="top" id="SGr-5k-UVd"/>
+                            <constraint firstItem="7HL-KX-KZ5" firstAttribute="bottom" secondItem="sg1-TS-kJ1" secondAttribute="bottom" id="Scw-at-qlY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jwk-hE-8GH" secondAttribute="trailing" constant="30" id="UeE-g6-Dba"/>
                             <constraint firstItem="Jwk-hE-8GH" firstAttribute="top" secondItem="HHf-rb-AjS" secondAttribute="bottom" constant="150" id="Vr5-lx-guX"/>
-                            <constraint firstItem="7HL-KX-KZ5" firstAttribute="top" secondItem="Jwk-hE-8GH" secondAttribute="bottom" constant="30" id="ZMo-j3-IA8">
-                                <variation key="heightClass=compact" constant="80"/>
-                            </constraint>
-                            <constraint firstItem="7HL-KX-KZ5" firstAttribute="top" secondItem="lK1-WP-oOE" secondAttribute="bottom" id="Zp1-fB-VLf"/>
-                            <constraint firstItem="XBH-wc-skD" firstAttribute="top" secondItem="lK1-WP-oOE" secondAttribute="bottom" constant="-42" id="aq6-Sr-qOR"/>
-                            <constraint firstItem="XBH-wc-skD" firstAttribute="top" secondItem="lK1-WP-oOE" secondAttribute="bottom" constant="-42" id="asw-Ip-JgQ"/>
+                            <constraint firstItem="7HL-KX-KZ5" firstAttribute="top" secondItem="XBH-wc-skD" secondAttribute="bottom" constant="20" id="WFx-Av-c0k"/>
+                            <constraint firstAttribute="width" secondItem="sg1-TS-kJ1" secondAttribute="width" id="XBe-bS-XG3"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Jwk-hE-8GH" secondAttribute="bottom" constant="90" id="YWl-bu-e7b"/>
+                            <constraint firstItem="7HL-KX-KZ5" firstAttribute="top" secondItem="sg1-TS-kJ1" secondAttribute="bottom" id="bCs-d4-oOs"/>
                             <constraint firstItem="Jwk-hE-8GH" firstAttribute="leading" secondItem="1Jx-df-Wms" secondAttribute="leadingMargin" constant="30" id="fM2-qM-Z12">
                                 <variation key="heightClass=compact-widthClass=regular" constant="50"/>
                             </constraint>
                             <constraint firstItem="OZy-jf-Ogh" firstAttribute="leading" secondItem="1Jx-df-Wms" secondAttribute="leading" id="fgN-QB-Bm8"/>
+                            <constraint firstAttribute="centerX" secondItem="sg1-TS-kJ1" secondAttribute="centerX" id="nmO-IY-dm0"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="FgH-do-LtG"/>
-                                <exclude reference="ZMo-j3-IA8"/>
-                                <exclude reference="aq6-Sr-qOR"/>
+                                <exclude reference="5vf-eb-bhj"/>
+                                <exclude reference="YWl-bu-e7b"/>
+                                <exclude reference="bCs-d4-oOs"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <include reference="FgH-do-LtG"/>
+                                <include reference="5vf-eb-bhj"/>
                                 <exclude reference="Vr5-lx-guX"/>
+                                <include reference="YWl-bu-e7b"/>
                                 <exclude reference="5F5-eG-a9T"/>
-                                <include reference="ZMo-j3-IA8"/>
                             </mask>
                         </variation>
                     </view>
@@ -309,7 +308,7 @@
                         <outlet property="imageDescriptionLabel" destination="WbH-RB-hTp" id="mSh-p8-f94"/>
                         <outlet property="imageTitleLabel" destination="hX3-Yb-VjW" id="wKk-R0-Qh1"/>
                         <outlet property="maskButton" destination="OZy-jf-Ogh" id="voJ-Ww-HYW"/>
-                        <outlet property="singleImage" destination="lK1-WP-oOE" id="exh-Ux-f1M"/>
+                        <outlet property="scrollView" destination="sg1-TS-kJ1" id="EHS-pg-mOb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Tn-6c-hlB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -317,7 +316,4 @@
             <point key="canvasLocation" x="1780" y="-188"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="KENYA_black_rhino_grazing" width="880" height="587"/>
-    </resources>
 </document>

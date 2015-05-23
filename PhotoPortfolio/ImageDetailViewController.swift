@@ -8,17 +8,15 @@
 
 import UIKit
 
-class ImageDetailViewController: UIViewController {
+class ImageDetailViewController: UIViewController, UIScrollViewDelegate  {
     
     var albumNumber = 0
     
     var imageNumber = 0
     
-    var imageIndex: Int = 0
+    @IBOutlet var scrollView: UIScrollView!
     
-    var maxImages = 0
-    
-    @IBOutlet var singleImage: UIImageView!
+    @IBOutlet var imageView: UIImageView!
     
     @IBOutlet var maskButton: UIButton!
     
@@ -73,103 +71,114 @@ class ImageDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        singleImage.image = UIImage(named: data[albumNumber][imageNumber]["image"]!)
+        //singleImage.image = UIImage(named: data[albumNumber][imageNumber]["image"]!)
         
         imageTitleLabel.text = data[albumNumber][imageNumber]["title"]
         
         imageDescriptionLabel.text = data[albumNumber][imageNumber]["text"]
-        
-       
-        //FIX MAXIMAGES///////////////////
-        maxImages = data[albumNumber].count - 1
-
-        
+    
         //println("second screen  imageNumber is \(imageNumber)")
         
-        //CHANGE IMAGE ON SWIPE
-        
-        var swipeRight = UISwipeGestureRecognizer(target: self, action: "swiped:") // put : at the end of method name
-        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
-        self.view.addGestureRecognizer(swipeRight)
-        
-        var swipeLeft = UISwipeGestureRecognizer(target: self, action: "swiped:") // put : at the end of method name
-        swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
-        self.view.addGestureRecognizer(swipeLeft)
         
         
+               
         }
+    
+    
+    override func viewDidLayoutSubviews() {
+        // 1
+        let image = UIImage(named: data[albumNumber][imageNumber]["image"]!)
+        imageView = UIImageView(image: image)
+        imageView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size:image!.size)
+        scrollView.addSubview(imageView)
+        
+        
+        
+        // 2
+        scrollView.contentSize = image!.size
+        
+        // 3
+        var doubleTapRecognizer = UITapGestureRecognizer(target: self, action: "scrollViewDoubleTapped:")
+        doubleTapRecognizer.numberOfTapsRequired = 2
+        doubleTapRecognizer.numberOfTouchesRequired = 1
+        scrollView.addGestureRecognizer(doubleTapRecognizer)
+        
+        // 4
+        let scrollViewFrame = scrollView.frame
+        let scaleWidth = scrollViewFrame.size.width / scrollView.contentSize.width
+        let scaleHeight = scrollViewFrame.size.height / scrollView.contentSize.height
+        let minScale = min(scaleWidth, scaleHeight);
+        scrollView.minimumZoomScale = minScale;
+        
+        // 5
+        scrollView.maximumZoomScale = 1.0
+        scrollView.zoomScale = minScale;
+        
+        // 6
+       // centerScrollViewContents()
+    }
+    
+    func centerScrollViewContents() {
+        let boundsSize = scrollView.bounds.size
+        var contentsFrame = imageView.frame
+        
+        if contentsFrame.size.width < boundsSize.width {
+            contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2.0
+            
+        } else {
+            contentsFrame.origin.x = 0.0
+        }
+        
+        if contentsFrame.size.height < boundsSize.height {
+            contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2.0 //- 50
+        } else {
+            contentsFrame.origin.y = 0.0
+        }
+        
+        println("boundsSize heght is \(boundsSize.height)")
+        println("View heignt is \(view.frame.height)")
+        println("x is \(contentsFrame.origin.x)")
+        println("y is \(contentsFrame.origin.y)")
+        
+        
+        imageView.frame = contentsFrame
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
-   
-    //CHANGE IMAGES ON SWIPE
-    
-    func swiped(gesture: UIGestureRecognizer) {
+    func scrollViewDoubleTapped(recognizer: UITapGestureRecognizer) {
+        // 1
+        let pointInView = recognizer.locationInView(imageView)
         
+        // 2
+        var newZoomScale = scrollView.zoomScale * 1.5
+        newZoomScale = min(newZoomScale, scrollView.maximumZoomScale)
         
-        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-            
-            switch swipeGesture.direction {
-                
-            case UISwipeGestureRecognizerDirection.Right :
-                println("User swiped right")
-                
-                // decrease index first
-                
-                imageIndex--
-                println("imageIndex is \(imageIndex)")
-                 println("maxImages is \(maxImages)")
-                
-                // check if index is in range
-                
-                if imageIndex < 0 {
-                    
-                    imageIndex = maxImages
-                    
-                }
-                
-                
-                
-                singleImage.image = UIImage(named: data[albumNumber][imageIndex]["image"]!)
-                imageTitleLabel.text = data[albumNumber][imageIndex]["title"]
-                
-                imageDescriptionLabel.text = data[albumNumber][imageIndex]["text"]
-                
-            case UISwipeGestureRecognizerDirection.Left:
-                println("User swiped Left")
-                
-                // increase index first
-                
-                imageIndex++
-                 println("imageIndex is \(imageIndex)")
-                println("maxImages is \(maxImages)")
-                // check if index is in range
-                
-                if imageIndex > maxImages {
-                    
-                    imageIndex = 0
-                    
-                }
-                
-                singleImage.image = UIImage(named: data[albumNumber][imageIndex]["image"]!)
-                
-                imageTitleLabel.text = data[albumNumber][imageIndex]["title"]
-                
-                imageDescriptionLabel.text = data[albumNumber][imageIndex]["text"]
-                
-                
-            default:
-                break //stops the code/codes nothing.
-                
-                
-            }
-            
-        }
+        // 3
+        let scrollViewSize = scrollView.bounds.size
+        let w = scrollViewSize.width / newZoomScale
+        let h = scrollViewSize.height / newZoomScale
+        let x = pointInView.x - (w / 2.0)
+        let y = pointInView.y - (h / 2.0)
         
+        let rectToZoomTo = CGRectMake(x, y, w, h);
         
+        // 4
+        scrollView.zoomToRect(rectToZoomTo, animated: true)
     }
     
+    
+    //Functions needed for UIScrollViewController
+    
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+    
+    func scrollViewDidZoom(scrollView: UIScrollView) {
+        centerScrollViewContents()
+    }
+   
     
 }
