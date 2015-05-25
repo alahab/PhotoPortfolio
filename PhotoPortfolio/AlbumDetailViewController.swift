@@ -23,6 +23,7 @@ class AlbumDetailViewController: UIViewController, UICollectionViewDataSource, U
 
        self.title = albumName
         
+      
         
     }
 

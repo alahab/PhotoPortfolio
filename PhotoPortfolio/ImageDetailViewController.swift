@@ -14,6 +14,8 @@ class ImageDetailViewController: UIViewController, UIScrollViewDelegate  {
     
     var imageNumber = 0
     
+   
+    
     @IBOutlet var scrollView: UIScrollView!
     
     @IBOutlet var imageView: UIImageView!
@@ -31,44 +33,44 @@ class ImageDetailViewController: UIViewController, UIScrollViewDelegate  {
     var pageImages = [UIImage]()
     var pageViews: [UIImageView?] = []
 
-//    
-//    @IBAction func maskButtonDidPress(sender: AnyObject) {
-//        
-//        spring(0.5) {
-//            self.maskButton.alpha = 0
-//        }
-//        
-//        descriptionView.hidden = true
-//
-//    }
-//    
-//    func showMask() {
-//        self.maskButton.hidden = false
-//        self.maskButton.alpha = 0
-//        spring(0.5) {
-//            self.maskButton.alpha = 1
-//        }
-//    }
-//    
-//    @IBAction func infoButton(sender: AnyObject) {
-//        
-//        let scale = CGAffineTransformMakeScale(0.3, 0.3)
-//        let translate = CGAffineTransformMakeTranslation(100, 200)
-//        descriptionView.transform = CGAffineTransformConcat(scale, translate)
-//        //descriptionView.alpha = 0
-//        
-//        showMask()
-//        
-//        spring(0.5) {
-//            let scale = CGAffineTransformMakeScale(1, 1)
-//            let translate = CGAffineTransformMakeTranslation(0, 0)
-//            self.descriptionView.transform = CGAffineTransformConcat(scale, translate)
-//            self.descriptionView.alpha = 1
-//        }
-//        
-//       self.descriptionView.hidden = false
-//        
-//    }
+    
+    @IBAction func maskButtonDidPress(sender: AnyObject) {
+        
+        spring(0.5) {
+            self.maskButton.alpha = 0
+        }
+        
+        descriptionView.hidden = true
+
+    }
+    
+    func showMask() {
+        self.maskButton.hidden = false
+        self.maskButton.alpha = 0
+        spring(0.5) {
+            self.maskButton.alpha = 1
+        }
+    }
+    
+    @IBAction func infoButton(sender: AnyObject) {
+        
+        let scale = CGAffineTransformMakeScale(0.3, 0.3)
+        let translate = CGAffineTransformMakeTranslation(100, 200)
+        descriptionView.transform = CGAffineTransformConcat(scale, translate)
+        //descriptionView.alpha = 0
+        
+        showMask()
+        
+        spring(0.5) {
+            let scale = CGAffineTransformMakeScale(1, 1)
+            let translate = CGAffineTransformMakeTranslation(0, 0)
+            self.descriptionView.transform = CGAffineTransformConcat(scale, translate)
+            self.descriptionView.alpha = 1
+        }
+        
+       self.descriptionView.hidden = false
+        
+    }
     
     
     
@@ -87,26 +89,34 @@ class ImageDetailViewController: UIViewController, UIScrollViewDelegate  {
         
         //Paging
         
-        // 1
+         //1
         
-//        var numberOfImagesPerALbum = data[albumNumber].count - 1
-//        
-//        for index in 0...numberOfImagesPerALbum {
-//            
-//            pageImages.append(UIImage(named: data[albumNumber][index]["image"]!)!)
-//            
-//            
-//        }
+        var numberOfImagesPerALbum = data[albumNumber].count - 1
         
-        pageImages = [UIImage(named:"Bird_flying_over_the_water_Iceland.png")!,
-            UIImage(named:"ice_foe_iceland.png")!,
-            UIImage(named:"ice_in_nowray.png")!]
+        for index in 0...numberOfImagesPerALbum {
+            
+            pageImages.append(UIImage(named: data[albumNumber][index]["image"]!)!)
+            
+            
+        }
+        
+        
+        
+        
+        
+//        pageImages = [UIImage(named:"Bird_flying_over_the_water_Iceland.png")!,
+//            UIImage(named:"ice_foe_iceland.png")!,
+//            UIImage(named:"ice_in_nowray.png")!,
+//            
+//            UIImage(named:"polar_bear_walking_on_ice")!]
         
         var pageCount = pageImages.count
         
         
         // 2
-        pageControl.currentPage = 0
+        pageControl.currentPage = imageNumber
+        println(imageNumber)
+        
         pageControl.numberOfPages = pageCount
         
         // 3
@@ -114,15 +124,26 @@ class ImageDetailViewController: UIViewController, UIScrollViewDelegate  {
             pageViews.append(nil)
         }
         
-        // 4
-        let pagesScrollViewSize = scrollView.frame.size
-        scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * CGFloat(pageImages.count), pagesScrollViewSize.height)
         
+        // 4
+        //let pagesScrollViewSize = scrollView.frame.size
+        //scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * CGFloat(pageImages.count), pagesScrollViewSize.height)
+        //println("scrollView.frame.size is \(scrollView.frame.size)")
         // 5
-       loadVisiblePages()
+       //loadVisiblePages()
+        
         
                
         }
+    
+    override func viewDidLayoutSubviews() {
+        let pagesScrollViewSize = scrollView.frame.size
+        scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * CGFloat(pageImages.count), pagesScrollViewSize.height)
+        println("scrollView.frame.size is \(scrollView.frame.size)")
+        // 5
+        loadVisiblePages()
+    }
+    
     
     
 //    override func viewDidLayoutSubviews() {
@@ -225,16 +246,20 @@ class ImageDetailViewController: UIViewController, UIScrollViewDelegate  {
         // 1
         if let pageView = pageViews[page] {
             // Do nothing. The view is already loaded.
+            
         } else {
             // 2
             var frame = scrollView.bounds
             frame.origin.x = frame.size.width * CGFloat(page)
             frame.origin.y = 0.0
             
-            // 3
+             3
             let newPageView = UIImageView(image: pageImages[page])
+            
             newPageView.contentMode = .ScaleAspectFit
             newPageView.frame = frame
+            
+            
             scrollView.addSubview(newPageView)
             
             // 4
@@ -259,6 +284,7 @@ class ImageDetailViewController: UIViewController, UIScrollViewDelegate  {
         // First, determine which page is currently visible
         let pageWidth = scrollView.frame.size.width
         let page = Int(floor((scrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
+        println("Page is \(page)")
         
         // Update the page control
         pageControl.currentPage = page

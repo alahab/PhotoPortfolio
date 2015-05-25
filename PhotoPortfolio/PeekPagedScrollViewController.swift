@@ -7,9 +7,6 @@
 import UIKit
 
 class PeekPagedScrollViewController: UIViewController, UIScrollViewDelegate {
-    
-    var albumNumber = 0
-    var imageNumber = 0
 
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var pageControl: UIPageControl!
@@ -19,10 +16,14 @@ class PeekPagedScrollViewController: UIViewController, UIScrollViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        println("test")
         // Set up the image you want to scroll & zoom and add it to the scroll view
-        pageImages = [UIImage(named:"Bird_flying_over_the_water_Iceland.png")!,
-            UIImage(named:"ice_foe_iceland.png")!,
-            UIImage(named:"ice_in_nowray.png")!]
+        pageImages = [UIImage(named:"photo1.png")!,
+            UIImage(named:"photo2.png")!,
+            UIImage(named:"photo3.png")!,
+            UIImage(named:"photo4.png")!,
+            UIImage(named:"photo5.png")!]
         
         let pageCount = pageImages.count
         
