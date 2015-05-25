@@ -194,10 +194,10 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sg1-TS-kJ1">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sg1-TS-kJ1">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
-                                    <outlet property="delegate" destination="nHu-J6-mrD" id="b3e-an-jOp"/>
+                                    <outlet property="delegate" destination="nHu-J6-mrD" id="2dN-8H-Nlh"/>
                                 </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBH-wc-skD">
@@ -263,6 +263,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="CLs-kO-Ata">
+                                <rect key="frame" x="281" y="543" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -308,7 +311,8 @@
                         <outlet property="imageDescriptionLabel" destination="WbH-RB-hTp" id="mSh-p8-f94"/>
                         <outlet property="imageTitleLabel" destination="hX3-Yb-VjW" id="wKk-R0-Qh1"/>
                         <outlet property="maskButton" destination="OZy-jf-Ogh" id="voJ-Ww-HYW"/>
-                        <outlet property="scrollView" destination="sg1-TS-kJ1" id="EHS-pg-mOb"/>
+                        <outlet property="pageControl" destination="CLs-kO-Ata" id="c33-qr-aOV"/>
+                        <outlet property="scrollView" destination="sg1-TS-kJ1" id="yZQ-tT-1Qa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Tn-6c-hlB" userLabel="First Responder" sceneMemberID="firstResponder"/>
