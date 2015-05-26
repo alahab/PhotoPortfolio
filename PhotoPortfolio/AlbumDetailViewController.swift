@@ -16,8 +16,6 @@ class AlbumDetailViewController: UIViewController, UICollectionViewDataSource, U
     
     var imageNumber = 1
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

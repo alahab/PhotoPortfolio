@@ -190,27 +190,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="1" minimumInteritemSpacing="0.0" id="19l-0U-cXn">
-                            <size key="itemSize" width="600" height="382"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="19l-0U-cXn">
+                            <size key="itemSize" width="487" height="328"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imgDetailCell" id="TRh-EG-8Ru" customClass="ImageDetailViewCell" customModule="PhotoPortfolio" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="imgDetailCell" id="TRh-EG-8Ru" customClass="ImageDetailViewCell" customModule="PhotoPortfolio" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="382"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="487" height="328"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A3X-nq-FPh">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A3X-nq-FPh">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="382"/>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8F-LC-29Z">
+                                            <rect key="frame" x="35" y="269" width="46" height="30"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="testButton:" destination="jQ0-zT-SQs" eventType="touchUpInside" id="l84-t2-PsG"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="j8F-LC-29Z" firstAttribute="top" secondItem="A3X-nq-FPh" secondAttribute="bottom" constant="-113" id="EoV-gK-HUN"/>
+                                    <constraint firstItem="A3X-nq-FPh" firstAttribute="leading" secondItem="j8F-LC-29Z" secondAttribute="trailing" constant="-81" id="Pqm-JO-pAh"/>
                                     <constraint firstItem="A3X-nq-FPh" firstAttribute="top" secondItem="TRh-EG-8Ru" secondAttribute="top" id="Z0O-zV-n8O"/>
                                     <constraint firstItem="A3X-nq-FPh" firstAttribute="leading" secondItem="TRh-EG-8Ru" secondAttribute="leading" id="htW-0y-2kV"/>
                                     <constraint firstAttribute="bottom" secondItem="A3X-nq-FPh" secondAttribute="bottom" id="jWl-09-j2G"/>
@@ -226,6 +237,9 @@
                             <outlet property="delegate" destination="jQ0-zT-SQs" id="QLz-q5-7hC"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <outlet property="imageCollectionView" destination="ZcM-ZA-EIH" id="WxO-Kh-iry"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MpU-aX-QEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

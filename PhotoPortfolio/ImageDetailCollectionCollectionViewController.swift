@@ -17,14 +17,24 @@ class ImageDetailCollectionCollectionViewController: UICollectionViewController,
     
     var pageImages = [UIImage]()
     
+    @IBOutlet var imageCollectionView: UICollectionView!
+    
+    
     //let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
+    @IBAction func testButton(sender: AnyObject) {
+        
+      
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Register cell classes
-//        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        
+        imageCollectionView.layoutIfNeeded()
+        
+        var indexPath = NSIndexPath(forItem: imageNumber, inSection: 0)
+        
+        collectionView?.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +42,16 @@ class ImageDetailCollectionCollectionViewController: UICollectionViewController,
         // Dispose of any resources that can be recreated.
     }
 
-   
+//    override func viewDidLayoutSubviews() {
+//        
+//        
+//    
+//        var indexPath = NSIndexPath(forItem: imageNumber, inSection: 0)
+//    
+//        collectionView?.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: false)//
+//        
+//
+//    }
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         //#warning Incomplete method implementation -- Return the number of sections
@@ -53,9 +72,25 @@ class ImageDetailCollectionCollectionViewController: UICollectionViewController,
         let imgName = data[albumNumber][curr]["image"]
         
         cell.DetailImageView.image = UIImage(named: imgName!)
-    
+        
+//        let size = cell.DetailImageView.image?.size
+//        
+//        let imageWidth = size?.width
+//        
+//        let imageHeight = size?.height
+//        
+//        let aspectratio = imageWidth! / imageHeight!
+//        
+//        //let newSize = CGSize(width: view.frame.width, height: imageHeight! / aspectratio )
+//        
+//        let newSize = CGSize(width: 100, height: 100)
+//        
+//        cell.sizeThatFits(newSize)
+        
         return cell
     }
+    
+   
     
     
 //    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -69,14 +104,14 @@ class ImageDetailCollectionCollectionViewController: UICollectionViewController,
 //    return cell
 //    }
     
-    
+//    
 //    func collectionView(collectionView: UICollectionView,
 //        layout collectionViewLayout: UICollectionViewLayout,
 //        sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
 //            
-//            width = view.frame.width
 //            
-//    return CGSize(width: width, height: )
+//            
+//    return CGSize(width: width, height: height)
 //    
 //    }
     
