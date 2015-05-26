@@ -21,12 +21,7 @@ class ImageDetailCollectionCollectionViewController: UICollectionViewController,
     
     
     //let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
-    @IBAction func testButton(sender: AnyObject) {
-        
-      
-        
-    }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -91,36 +86,34 @@ class ImageDetailCollectionCollectionViewController: UICollectionViewController,
     }
     
    
+    func collectionView(collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+            
+            var numberOfCellInRow : Int = 1
+            var padding : Int = 0
+            var collectionCellWidth : CGFloat = (self.view.frame.size.width/CGFloat(numberOfCellInRow)) - CGFloat(padding)
+            return CGSize(width: collectionCellWidth , height: collectionCellWidth)
+            
+        
+    }
     
+    extension UINavigationController {
+        public override func supportedInterfaceOrientations() -> Int {
+            return visibleViewController.supportedInterfaceOrientations()
+        }
+        public override func shouldAutorotate() -> Bool {
+            return visibleViewController.shouldAutorotate()
+        }
+    }
     
-//    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-//        let cell: ImageDetailViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("imageDetailCell", forIndexPath: indexPath) as! ImageDetailViewCell
-//    
-//   
-//    cell.DetailImageView.image = UIImage(named:data[albumNumber][imageNumber]["image"]!)
-//    
-//       println(cell.dynamicType)
-//        
-//    return cell
-//    }
+    class ViewController: UIViewController {
+        override func shouldAutorotate() -> Bool {
+            return true
+        }
+    }
     
-//    
-//    func collectionView(collectionView: UICollectionView,
-//        layout collectionViewLayout: UICollectionViewLayout,
-//        sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-//            
-//            
-//            
-//    return CGSize(width: width, height: height)
-//    
-//    }
+  
     
-//    func collectionView(collectionView: UICollectionView,
-//        layout collectionViewLayout: UICollectionViewLayout,
-//        insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-//    return sectionInsets
-//    }
-//    
-
   
 }
