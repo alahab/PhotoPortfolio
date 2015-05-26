@@ -77,20 +77,6 @@ class ImageDetailViewController: UIViewController, UIScrollViewDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-
-        //singleImage.image = UIImage(named: data[albumNumber][imageNumber]["image"]!)
-        
-        imageTitleLabel.text = data[albumNumber][imageNumber]["title"]
-        
-        imageDescriptionLabel.text = data[albumNumber][imageNumber]["text"]
-    
-        //println("second screen  imageNumber is \(imageNumber)")
-        
-        //Paging
-        
-         //1
-        
         var numberOfImagesPerALbum = data[albumNumber].count - 1
         
         for index in 0...numberOfImagesPerALbum {
@@ -99,16 +85,6 @@ class ImageDetailViewController: UIViewController, UIScrollViewDelegate  {
             
             
         }
-        
-        
-        
-        
-        
-//        pageImages = [UIImage(named:"Bird_flying_over_the_water_Iceland.png")!,
-//            UIImage(named:"ice_foe_iceland.png")!,
-//            UIImage(named:"ice_in_nowray.png")!,
-//            
-//            UIImage(named:"polar_bear_walking_on_ice")!]
         
         var pageCount = pageImages.count
         
@@ -125,23 +101,25 @@ class ImageDetailViewController: UIViewController, UIScrollViewDelegate  {
         }
         
         
-        // 4
-        //let pagesScrollViewSize = scrollView.frame.size
-        //scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * CGFloat(pageImages.count), pagesScrollViewSize.height)
-        //println("scrollView.frame.size is \(scrollView.frame.size)")
-        // 5
-       //loadVisiblePages()
         
-        
-               
-        }
+//        if pageViews == [nil,nil,nil,nil,nil] {
+//            scrollView.contentOffset.x = CGFloat(imageNumber) * scrollView.frame.size.width
+//            println("Offset is set")
+//        }
+//        
+    
+    }
     
     override func viewDidLayoutSubviews() {
         let pagesScrollViewSize = scrollView.frame.size
         scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * CGFloat(pageImages.count), pagesScrollViewSize.height)
-        println("scrollView.frame.size is \(scrollView.frame.size)")
+        
+        
+        
+
         // 5
         loadVisiblePages()
+        
     }
     
     
@@ -284,7 +262,12 @@ class ImageDetailViewController: UIViewController, UIScrollViewDelegate  {
         // First, determine which page is currently visible
         let pageWidth = scrollView.frame.size.width
         let page = Int(floor((scrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
-        println("Page is \(page)")
+        println(scrollView.contentOffset.x)
+        println(page)
+        
+        imageTitleLabel.text = data[albumNumber][page]["title"]
+        
+        imageDescriptionLabel.text = data[albumNumber][page]["text"]
         
         // Update the page control
         pageControl.currentPage = page
