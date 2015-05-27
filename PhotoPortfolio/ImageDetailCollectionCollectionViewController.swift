@@ -25,28 +25,26 @@ class ImageDetailCollectionCollectionViewController: UICollectionViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         imageCollectionView.layoutIfNeeded()
         
         var indexPath = NSIndexPath(forItem: imageNumber, inSection: 0)
         
         collectionView?.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: false)
     }
+    
+    override func viewDidLayoutSubviews() {
+      
+    }
+    
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-//    override func viewDidLayoutSubviews() {
-//        
-//        
-//    
-//        var indexPath = NSIndexPath(forItem: imageNumber, inSection: 0)
-//    
-//        collectionView?.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: false)//
-//        
-//
-//    }
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         //#warning Incomplete method implementation -- Return the number of sections
@@ -68,23 +66,15 @@ class ImageDetailCollectionCollectionViewController: UICollectionViewController,
         
         cell.DetailImageView.image = UIImage(named: imgName!)
         
-//        let size = cell.DetailImageView.image?.size
-//        
-//        let imageWidth = size?.width
-//        
-//        let imageHeight = size?.height
-//        
-//        let aspectratio = imageWidth! / imageHeight!
-//        
-//        //let newSize = CGSize(width: view.frame.width, height: imageHeight! / aspectratio )
-//        
-//        let newSize = CGSize(width: 100, height: 100)
-//        
-//        cell.sizeThatFits(newSize)
+       
+        
+//        cell.frame.size.height = collectionView.frame.size.height
+//        cell.DetailImageView.frame.size.height = collectionView.frame.size.height
+        
         
         return cell
     }
-    
+ 
    
     func collectionView(collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
@@ -93,27 +83,27 @@ class ImageDetailCollectionCollectionViewController: UICollectionViewController,
             var numberOfCellInRow : Int = 1
             var padding : Int = 0
             var collectionCellWidth : CGFloat = (self.view.frame.size.width/CGFloat(numberOfCellInRow)) - CGFloat(padding)
-            return CGSize(width: collectionCellWidth , height: collectionCellWidth)
             
+            //return CGSize(width: collectionCellWidth , height:collectionView.frame.size.height)
+            
+            
+            
+            //imageCollectionView.layoutIfNeeded()
+            
+            //return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height )
+            
+            let navigationBarHeight: CGFloat = self.navigationController!.navigationBar.frame.height
+            return CGSize(width: collectionView.bounds.size.width, height: collectionView.bounds.size.height - navigationBarHeight)
         
     }
     
-    extension UINavigationController {
-        public override func supportedInterfaceOrientations() -> Int {
-            return visibleViewController.supportedInterfaceOrientations()
-        }
-        public override func shouldAutorotate() -> Bool {
-            return visibleViewController.shouldAutorotate()
-        }
-    }
-    
-    class ViewController: UIViewController {
-        override func shouldAutorotate() -> Bool {
-            return true
-        }
-    }
-    
-  
+//    override func shouldAutorotate() -> Bool {
+//        return true
+//    }
+//    
+//    override func supportedInterfaceOrientations() -> Int {
+//        return Int(UIInterfaceOrientationMask.Portrait.rawValue) | Int(UIInterfaceOrientationMask.Landscape.rawValue)
+//    }
     
   
 }
