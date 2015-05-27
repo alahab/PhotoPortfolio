@@ -94,5 +94,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
     }
     
+    
+    
+    override func supportedInterfaceOrientations() -> Int {
+        return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+    }
+    
 }
 

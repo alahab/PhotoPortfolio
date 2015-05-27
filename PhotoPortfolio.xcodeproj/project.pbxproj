@@ -18,6 +18,7 @@
 		9C2FB7A11B1302AA0056C1F2 /* PeekPagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2FB7A01B1302AA0056C1F2 /* PeekPagedScrollViewController.swift */; };
 		9C2FB7A31B13F19D0056C1F2 /* ImageDetailCollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2FB7A21B13F19D0056C1F2 /* ImageDetailCollectionCollectionViewController.swift */; };
 		9C2FB7A51B14173E0056C1F2 /* ImageDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2FB7A41B14173E0056C1F2 /* ImageDetailViewCell.swift */; };
+		9C2FB7A71B15EC690056C1F2 /* NavBarExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2FB7A61B15EC690056C1F2 /* NavBarExtensionViewController.swift */; };
 		9C378D811B0C390C00783BDE /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C378D801B0C390C00783BDE /* ImageDetailViewController.swift */; };
 		9C378D841B0CBA5C00783BDE /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C378D831B0CBA5C00783BDE /* BlurView.swift */; };
 		9C378D861B0CBE7100783BDE /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C378D851B0CBE7100783BDE /* SpringAnimation.swift */; };
@@ -51,6 +52,7 @@
 		9C2FB7A01B1302AA0056C1F2 /* PeekPagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeekPagedScrollViewController.swift; path = PhotoPortfolio/PeekPagedScrollViewController.swift; sourceTree = "<group>"; };
 		9C2FB7A21B13F19D0056C1F2 /* ImageDetailCollectionCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailCollectionCollectionViewController.swift; sourceTree = "<group>"; };
 		9C2FB7A41B14173E0056C1F2 /* ImageDetailViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailViewCell.swift; sourceTree = "<group>"; };
+		9C2FB7A61B15EC690056C1F2 /* NavBarExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarExtensionViewController.swift; sourceTree = "<group>"; };
 		9C378D801B0C390C00783BDE /* ImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageDetailViewController.swift; path = PhotoPortfolio/ImageDetailViewController.swift; sourceTree = "<group>"; };
 		9C378D831B0CBA5C00783BDE /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = ../BlurView.swift; sourceTree = "<group>"; };
 		9C378D851B0CBE7100783BDE /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		9C08E1B61B0A00CA00B4F48B = {
 			isa = PBXGroup;
 			children = (
+				9C2FB7A61B15EC690056C1F2 /* NavBarExtensionViewController.swift */,
 				9C378D801B0C390C00783BDE /* ImageDetailViewController.swift */,
 				9C2FB7A01B1302AA0056C1F2 /* PeekPagedScrollViewController.swift */,
 				9C08E1C11B0A00CB00B4F48B /* PhotoPortfolio */,
@@ -262,6 +265,7 @@
 				9C08E1FB1B0A34A300B4F48B /* Data.swift in Sources */,
 				9C2FB7A11B1302AA0056C1F2 /* PeekPagedScrollViewController.swift in Sources */,
 				9CC9882F1B0ADBD500204176 /* AlbumDetailViewController.swift in Sources */,
+				9C2FB7A71B15EC690056C1F2 /* NavBarExtensionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

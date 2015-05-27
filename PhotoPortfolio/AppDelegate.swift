@@ -62,6 +62,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
+    //WAS TRYING TO MAKE ONL ONE VIEWCOLNTROLLER ROTATE
+//    func application(application: UIApplication, supportedInterfaceOrientationsForWindow window: UIWindow?) -> Int {
+//        
+//        if self.window?.rootViewController?.presentedViewController is ImageDetailCollectionCollectionViewController {
+//            return Int(UIInterfaceOrientationMask.All.rawValue);
+//        } else {
+//            return Int(UIInterfaceOrientationMask.Portrait.rawValue);
+//        }
+//        
+//    }
+    
    
 }
 
