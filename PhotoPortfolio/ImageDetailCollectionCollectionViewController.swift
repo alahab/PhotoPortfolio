@@ -93,10 +93,39 @@ class ImageDetailCollectionCollectionViewController: UICollectionViewController,
             //return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height )
             
             let navigationBarHeight: CGFloat = self.navigationController!.navigationBar.frame.height
-            return CGSize(width: collectionView.bounds.size.width, height: collectionView.bounds.size.height - navigationBarHeight)
+            return CGSize(width: collectionView.bounds.size.width, height: collectionView.bounds.size.height //- navigationBarHeight
+            )
         
     }
     
     
-  
+    
+//    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval)
+//    {
+//        let currentPage = Int(collectionView!.contentOffset.x / collectionView!.bounds.size.width)
+//        
+//        var width = collectionView!.bounds.size.width
+//        UIView.animateWithDuration(duration) {
+//            self.collectionView!.setContentOffset(CGPointMake(width * CGFloat(currentPage), 0.0), animated: false)
+//            self.collectionView!.collectionViewLayout.invalidateLayout()
+//        }
+//    
+//    }
+
+//    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+//        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+//        coordinator.animateAlongsideTransition(nil, completion: {context in
+//            
+//            if UIDevice.currentDevice().orientation == UIDeviceOrientation.LandscapeLeft || UIDevice.currentDevice().orientation == UIDeviceOrientation.LandscapeRight {
+//                
+//               
+//                
+//            }
+//        }
+//        })
+//
+//}
+//
+//    
+    
 }

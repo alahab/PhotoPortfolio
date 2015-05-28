@@ -1,3 +1,4 @@
+
 //
 //  AlbumDetailViewController.swift
 //  PhotoPortfolio
@@ -78,9 +79,15 @@ class AlbumDetailViewController: UIViewController, UICollectionViewDataSource, U
 
 
     override func supportedInterfaceOrientations() -> Int {
+        
         return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+        
     }
     
+    override func preferredInterfaceOrientationForPresentation() -> UIInterfaceOrientation {
+        return UIInterfaceOrientation.Portrait
+    }
+  
     
 
 }
