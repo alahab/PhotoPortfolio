@@ -92,7 +92,7 @@ class ImageDetailCollectionCollectionViewController: UICollectionViewController,
             
             //return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height )
             
-            let navigationBarHeight: CGFloat = self.navigationController!.navigationBar.frame.height
+            //let navigationBarHeight: CGFloat = self.navigationController!.navigationBar.frame.height
             return CGSize(width: collectionView.bounds.size.width, height: collectionView.bounds.size.height //- navigationBarHeight
             )
         

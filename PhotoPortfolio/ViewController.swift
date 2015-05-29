@@ -87,10 +87,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var detailViewController = segue.destinationViewController as! AlbumDetailViewController
         
-        detailViewController.albumName = albumName
-        detailViewController.albumNumber = albumNumber
+        if segue.identifier == "AlbumDetail" {
+            var detailViewController = segue.destinationViewController as! AlbumDetailViewController
+        
+            detailViewController.albumName = albumName
+            detailViewController.albumNumber = albumNumber
+        }
         
     }
     
