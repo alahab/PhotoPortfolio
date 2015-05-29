@@ -25,6 +25,8 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
     
     var pickedImg = UIImage(named: "")
     
+    var imageForCollectionView = UIImage(named: "")
+    
     @IBAction func albumNameTextField(sender: AnyObject) {
         
       newAlbumName = albumNameTextFieldOutlet.text
@@ -114,6 +116,10 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
          let cell: AddNewImageInCreateAlbumCell = collectionView.dequeueReusableCellWithReuseIdentifier("AddNewImageCell", forIndexPath: indexPath) as! AddNewImageInCreateAlbumCell
+        
+        //cell.newImageViewInCell.image = imageForCollectionView
+        
+        collectionView.hidden = false
         
         return cell
     }

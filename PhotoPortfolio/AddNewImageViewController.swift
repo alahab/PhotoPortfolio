@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddNewImageViewController: UIViewController {
+class AddNewImageViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var newImageViewinAddNewInage: UIImageView!
     
@@ -18,7 +18,12 @@ class AddNewImageViewController: UIViewController {
     
     var pickedImg = UIImage(named: "")
     
+    var imageForCollectionView = UIImage(named: "")
+    
     @IBAction func addImageButoonPressed(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("fromAddNewImageToAddNewAlbum", sender: self)
+        
     }
     
     
@@ -26,7 +31,11 @@ class AddNewImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    newImageViewinAddNewInage.image = pickedImg
+        imageTitleTextField.delegate = self
+        
+        imageDescriptionTextField.delegate = self
+        
+        newImageViewinAddNewInage.image = pickedImg
 
         // Do any additional setup after loading the view.
     }
@@ -36,6 +45,19 @@ class AddNewImageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "fromAddNewImageToAddNewAlbum" {
+            
+            var createAlbumViewController = segue.destinationViewController as! CreateAlbumViewController
+            
+            createAlbumViewController.imageForCollectionView = imageForCollectionView
+            
+        }
+    }
    
 }
