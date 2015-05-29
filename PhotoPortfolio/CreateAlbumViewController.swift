@@ -57,6 +57,14 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
         
         picker.dismissViewControllerAnimated(true, completion:nil)
         
+        self.performSegueWithIdentifier("fromAddAlbumToAddImage", sender: self)
+        
+        
+        
+        
+       
+         
+        
         
         
     }
@@ -64,6 +72,8 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         
         self.dismissViewControllerAnimated(true, completion: nil)
+        
+        
     }
     
             
@@ -100,7 +110,19 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
         return cell
     }
     
+    
+    
+    override func supportedInterfaceOrientations() -> Int {
+        
+        return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+        
+    }
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
 
+    
     
 }
 

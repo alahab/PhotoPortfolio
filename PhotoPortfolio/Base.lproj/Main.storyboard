@@ -167,6 +167,7 @@
                         <outlet property="addNewImageView" destination="xfk-e9-Gqk" id="OL2-XN-cmz"/>
                         <outlet property="albumNameTextField" destination="4L6-5G-6Lw" id="IoG-ZI-6Co"/>
                         <outlet property="albumNameTextFieldOutlet" destination="4L6-5G-6Lw" id="TDy-df-YeZ"/>
+                        <segue destination="KaP-So-YPo" kind="presentation" identifier="fromAddAlbumToAddImage" id="xW0-iy-I1c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pmc-Zi-hXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -283,6 +284,69 @@
             </objects>
             <point key="canvasLocation" x="509" y="-192"/>
         </scene>
+        <!--Add New Image View Controller-->
+        <scene sceneID="ej6-yo-iVy">
+            <objects>
+                <viewController id="KaP-So-YPo" customClass="AddNewImageViewController" customModule="PhotoPortfolio" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9es-RQ-UAe"/>
+                        <viewControllerLayoutGuide type="bottom" id="hLw-x1-LgL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HDH-sx-FoW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KENYA_black_rhino_grazing" translatesAutoresizingMaskIntoConstraints="NO" id="tUQ-Yb-fNg">
+                                <rect key="frame" x="31" y="28" width="538" height="322"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Image Title" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bUa-qr-IRw">
+                                <rect key="frame" x="31" y="365" width="538" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Image Description" translatesAutoresizingMaskIntoConstraints="NO" id="Xo5-b4-UQO">
+                                <rect key="frame" x="31" y="420" width="538" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAG-DK-wUb">
+                                <rect key="frame" x="263" y="555" width="75" height="30"/>
+                                <state key="normal" title="Add Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addImageButoonPressed:" destination="KaP-So-YPo" eventType="touchUpInside" id="r69-k8-ZtO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27450980390000002" green="0.45098039220000002" blue="0.52549019610000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xo5-b4-UQO" firstAttribute="centerX" secondItem="tUQ-Yb-fNg" secondAttribute="centerX" id="0ff-x6-9gq"/>
+                            <constraint firstItem="Xo5-b4-UQO" firstAttribute="width" secondItem="tUQ-Yb-fNg" secondAttribute="width" id="3NC-f6-2lL"/>
+                            <constraint firstItem="bUa-qr-IRw" firstAttribute="centerX" secondItem="tUQ-Yb-fNg" secondAttribute="centerX" id="89D-fK-Yus"/>
+                            <constraint firstItem="UAG-DK-wUb" firstAttribute="top" secondItem="Xo5-b4-UQO" secondAttribute="bottom" constant="15" id="BMd-M4-cHL"/>
+                            <constraint firstItem="bUa-qr-IRw" firstAttribute="width" secondItem="tUQ-Yb-fNg" secondAttribute="width" id="D4C-8U-QHt"/>
+                            <constraint firstItem="tUQ-Yb-fNg" firstAttribute="leading" secondItem="HDH-sx-FoW" secondAttribute="leadingMargin" constant="15" id="EON-9f-0DS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tUQ-Yb-fNg" secondAttribute="trailing" constant="15" id="Jls-CL-ZwY"/>
+                            <constraint firstItem="hLw-x1-LgL" firstAttribute="top" secondItem="Xo5-b4-UQO" secondAttribute="bottom" constant="60" id="KX4-4D-Bh3"/>
+                            <constraint firstItem="bUa-qr-IRw" firstAttribute="top" secondItem="tUQ-Yb-fNg" secondAttribute="bottom" constant="15" id="KjH-7H-Cwt"/>
+                            <constraint firstItem="Xo5-b4-UQO" firstAttribute="top" secondItem="bUa-qr-IRw" secondAttribute="bottom" constant="25" id="P08-Qb-T0Q"/>
+                            <constraint firstItem="hLw-x1-LgL" firstAttribute="top" secondItem="tUQ-Yb-fNg" secondAttribute="bottom" constant="250" id="bTx-jU-4Of"/>
+                            <constraint firstItem="tUQ-Yb-fNg" firstAttribute="top" secondItem="9es-RQ-UAe" secondAttribute="bottom" constant="8" id="nLP-TO-dew"/>
+                            <constraint firstItem="Xo5-b4-UQO" firstAttribute="centerX" secondItem="UAG-DK-wUb" secondAttribute="centerX" constant="-0.5" id="rJT-1U-xCo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageDescriptionText" destination="Xo5-b4-UQO" id="rT9-48-XJs"/>
+                        <outlet property="imageTitleTextField" destination="bUa-qr-IRw" id="Ybb-Ek-uvT"/>
+                        <outlet property="newImageViewinAddNewInage" destination="tUQ-Yb-fNg" id="Qup-QD-04r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XwI-wR-Edk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1236" y="-875"/>
+        </scene>
         <!--Album Detail View Controller-->
         <scene sceneID="FJk-G6-PbR">
             <objects>
@@ -391,6 +455,7 @@
     </scenes>
     <resources>
         <image name="Bird_flying_over_the_water_Iceland" width="880" height="587"/>
+        <image name="KENYA_black_rhino_grazing" width="880" height="587"/>
         <image name="add_picture_button" width="288" height="288"/>
     </resources>
 </document>
