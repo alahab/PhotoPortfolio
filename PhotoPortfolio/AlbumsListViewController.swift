@@ -12,7 +12,7 @@ var width: CGFloat = 0.0
 
 var data = getData()
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class AlbumsListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var albumName = ""
     
@@ -39,7 +39,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell: CollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
+        let cell: AlbumsListCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! AlbumsListCollectionViewCell
         
         
         cell.imgCell.image =  UIImage(named: data[indexPath.row][indexPath.row]["image"]!)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class AlbumsListCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var imgCell: UIImageView!
     

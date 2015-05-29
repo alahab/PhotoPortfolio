@@ -76,7 +76,7 @@ class AlbumDetailViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var imageDetailViewController = segue.destinationViewController as! ImageDetailCollectionCollectionViewController
+        var imageDetailViewController = segue.destinationViewController as! ImageDetailCollectionViewController
         
         imageDetailViewController.albumNumber = albumNumber
         

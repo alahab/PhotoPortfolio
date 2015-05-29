@@ -63,9 +63,11 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
             pickedImg = pickedImage
         }
         
-        
+        picker.dismissViewControllerAnimated(true, completion:nil)
         
         self.performSegueWithIdentifier("fromAddAlbumToAddImage", sender: self)
+        
+        
         
         
     }

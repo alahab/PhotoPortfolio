@@ -10,7 +10,7 @@ import UIKit
 
 let reuseIdentifier = "imgDetailCell"
 
-class ImageDetailCollectionCollectionViewController: UICollectionViewController,  UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class ImageDetailCollectionViewController: UICollectionViewController,  UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var albumNumber = 0
     var imageNumber = 0

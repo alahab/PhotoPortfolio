@@ -59,8 +59,9 @@ class AddNewImageViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "fromAddNewImageToAddNewAlbum" {
             
-          // newAlbumDictionary["image"] = pickedImg
-                       
+            var createAlbumViewController = segue.destinationViewController as! CreateAlbumViewController
+            
+            
         }
     }
    
