@@ -23,6 +23,7 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
    
     var imagePicker = UIImagePickerController()
     
+    var pickedImg = UIImage(named: "")
     
     @IBAction func albumNameTextField(sender: AnyObject) {
         
@@ -41,7 +42,7 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
     @IBAction func addNewImageButtonTapped(sender: AnyObject) {
         
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.SavedPhotosAlbum){
-            println("Button capture")
+            
             
             
             imagePicker.delegate = self
@@ -55,16 +56,14 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]){
         
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+            pickedImg = pickedImage
+        }
+        
         picker.dismissViewControllerAnimated(true, completion:nil)
         
         self.performSegueWithIdentifier("fromAddAlbumToAddImage", sender: self)
-        
-        
-        
-        
-       
-         
-        
         
         
     }
@@ -76,7 +75,16 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "fromAddAlbumToAddImage" {
+            var addNewImageViewController = segue.destinationViewController as! AddNewImageViewController
+    
+          addNewImageViewController.pickedImg = pickedImg
+ 
             
+            
+        }
+    }
    
     
 

@@ -14,7 +14,9 @@ class AddNewImageViewController: UIViewController {
     
     @IBOutlet var imageTitleTextField: UITextField!
     
-    @IBOutlet var imageDescriptionText: UITextView!
+    @IBOutlet var imageDescriptionTextField: UITextField!
+    
+    var pickedImg = UIImage(named: "")
     
     @IBAction func addImageButoonPressed(sender: AnyObject) {
     }
@@ -23,6 +25,8 @@ class AddNewImageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    newImageViewinAddNewInage.image = pickedImg
 
         // Do any additional setup after loading the view.
     }
