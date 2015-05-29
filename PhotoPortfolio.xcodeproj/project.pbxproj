@@ -23,6 +23,7 @@
 		9C2FB7AB1B172EFD0056C1F2 /* Untitled-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2FB7AA1B172EFD0056C1F2 /* Untitled-1.png */; };
 		9C2FB7AD1B1754950056C1F2 /* AddNewImageInCreateAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2FB7AC1B1754950056C1F2 /* AddNewImageInCreateAlbumCell.swift */; };
 		9C2FB7AF1B185FC70056C1F2 /* AddNewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2FB7AE1B185FC70056C1F2 /* AddNewImageViewController.swift */; };
+		9C2FB7B11B1894DD0056C1F2 /* NewAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2FB7B01B1894DD0056C1F2 /* NewAlbum.swift */; };
 		9C378D811B0C390C00783BDE /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C378D801B0C390C00783BDE /* ImageDetailViewController.swift */; };
 		9C378D841B0CBA5C00783BDE /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C378D831B0CBA5C00783BDE /* BlurView.swift */; };
 		9C378D861B0CBE7100783BDE /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C378D851B0CBE7100783BDE /* SpringAnimation.swift */; };
@@ -61,6 +62,7 @@
 		9C2FB7AA1B172EFD0056C1F2 /* Untitled-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Untitled-1.png"; sourceTree = "<group>"; };
 		9C2FB7AC1B1754950056C1F2 /* AddNewImageInCreateAlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewImageInCreateAlbumCell.swift; sourceTree = "<group>"; };
 		9C2FB7AE1B185FC70056C1F2 /* AddNewImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewImageViewController.swift; sourceTree = "<group>"; };
+		9C2FB7B01B1894DD0056C1F2 /* NewAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAlbum.swift; sourceTree = "<group>"; };
 		9C378D801B0C390C00783BDE /* ImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageDetailViewController.swift; path = PhotoPortfolio/ImageDetailViewController.swift; sourceTree = "<group>"; };
 		9C378D831B0CBA5C00783BDE /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = ../BlurView.swift; sourceTree = "<group>"; };
 		9C378D851B0CBE7100783BDE /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				9C378D851B0CBE7100783BDE /* SpringAnimation.swift */,
 				9C378D831B0CBA5C00783BDE /* BlurView.swift */,
 				9C08E1FA1B0A34A300B4F48B /* Data.swift */,
+				9C2FB7B01B1894DD0056C1F2 /* NewAlbum.swift */,
 			);
 			name = Useful;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				9C378D861B0CBE7100783BDE /* SpringAnimation.swift in Sources */,
 				9C08E1FB1B0A34A300B4F48B /* Data.swift in Sources */,
 				9C2FB7A11B1302AA0056C1F2 /* PeekPagedScrollViewController.swift in Sources */,
+				9C2FB7B11B1894DD0056C1F2 /* NewAlbum.swift in Sources */,
 				9CC9882F1B0ADBD500204176 /* AlbumDetailViewController.swift in Sources */,
 				9C2FB7A71B15EC690056C1F2 /* NavBarExtensionViewController.swift in Sources */,
 				9C2FB7AD1B1754950056C1F2 /* AddNewImageInCreateAlbumCell.swift in Sources */,

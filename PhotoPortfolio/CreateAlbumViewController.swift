@@ -25,7 +25,7 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
     
     var pickedImg = UIImage(named: "")
     
-    var imageForCollectionView = UIImage(named: "")
+    
     
     @IBAction func albumNameTextField(sender: AnyObject) {
         
@@ -63,7 +63,7 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
             pickedImg = pickedImage
         }
         
-        picker.dismissViewControllerAnimated(true, completion:nil)
+        
         
         self.performSegueWithIdentifier("fromAddAlbumToAddImage", sender: self)
         
@@ -95,6 +95,8 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
         super.viewDidLoad()
         
         albumNameTextFieldOutlet.delegate = self
+        
+     
        
 
         // Do any additional setup after loading the view.
@@ -117,9 +119,9 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
          let cell: AddNewImageInCreateAlbumCell = collectionView.dequeueReusableCellWithReuseIdentifier("AddNewImageCell", forIndexPath: indexPath) as! AddNewImageInCreateAlbumCell
         
-        //cell.newImageViewInCell.image = imageForCollectionView
         
-        collectionView.hidden = false
+        
+        
         
         return cell
     }

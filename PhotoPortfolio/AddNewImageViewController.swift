@@ -18,9 +18,13 @@ class AddNewImageViewController: UIViewController, UITextFieldDelegate {
     
     var pickedImg = UIImage(named: "")
     
-    var imageForCollectionView = UIImage(named: "")
+    var newAlbumDictionary = ["":""]
+    
+    
     
     @IBAction func addImageButoonPressed(sender: AnyObject) {
+        
+        
         
         self.performSegueWithIdentifier("fromAddNewImageToAddNewAlbum", sender: self)
         
@@ -36,6 +40,8 @@ class AddNewImageViewController: UIViewController, UITextFieldDelegate {
         imageDescriptionTextField.delegate = self
         
         newImageViewinAddNewInage.image = pickedImg
+        
+       
 
         // Do any additional setup after loading the view.
     }
@@ -53,10 +59,8 @@ class AddNewImageViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "fromAddNewImageToAddNewAlbum" {
             
-            var createAlbumViewController = segue.destinationViewController as! CreateAlbumViewController
-            
-            createAlbumViewController.imageForCollectionView = imageForCollectionView
-            
+          // newAlbumDictionary["image"] = pickedImg
+                       
         }
     }
    
