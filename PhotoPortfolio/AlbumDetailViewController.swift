@@ -26,6 +26,13 @@ class AlbumDetailViewController: UIViewController, UICollectionViewDataSource, U
         
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let value = UIInterfaceOrientation.Portrait.rawValue
+        UIDevice.currentDevice().setValue(value, forKey: "orientation")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -83,6 +90,8 @@ class AlbumDetailViewController: UIViewController, UICollectionViewDataSource, U
         return Int(UIInterfaceOrientationMask.Portrait.rawValue)
         
     }
+    
+    
     
     override func preferredInterfaceOrientationForPresentation() -> UIInterfaceOrientation {
         return UIInterfaceOrientation.Portrait
