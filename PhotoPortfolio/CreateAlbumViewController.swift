@@ -8,7 +8,8 @@
 
 import UIKit
 
-class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
+
+class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var addNewImageView: UIView!
     
@@ -18,12 +19,14 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
     
     @IBOutlet var albumNameTextFieldOutlet: UITextField!
     
-    
+    var newAlbumName = ""
+   
+    var imagePicker = UIImagePickerController()
     
     
     @IBAction func albumNameTextField(sender: AnyObject) {
         
-      
+      newAlbumName = albumNameTextFieldOutlet.text
         
         
         
@@ -35,8 +38,38 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
         return true;
     }
     
+    @IBAction func addNewImageButtonTapped(sender: AnyObject) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.SavedPhotosAlbum){
+            println("Button capture")
+            
+            
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum;
+            imagePicker.allowsEditing = false
+            
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
+        
+    }
     
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]){
+        
+        picker.dismissViewControllerAnimated(true, completion:nil)
+        
+        
+        
+    }
     
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+            
+   
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,14 +101,6 @@ class CreateAlbumViewController: UIViewController, UICollectionViewDataSource, U
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
+

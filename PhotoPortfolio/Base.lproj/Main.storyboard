@@ -72,6 +72,9 @@
                                         <rect key="frame" x="18" y="18" width="84" height="84"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" image="add_picture_button"/>
+                                        <connections>
+                                            <action selector="addNewImageButtonTapped:" destination="Ix9-zA-ucB" eventType="touchUpInside" id="8BO-8x-eZT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
